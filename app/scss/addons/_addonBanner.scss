@@ -1,0 +1,10 @@
+@media (min-width: 230px) {
+    .addon__banner {
+        .banner__item {
+            position: relative;
+            .frame {
+                @include aspectRatio(1920, 594);
+            }
+        }
+    }
+}

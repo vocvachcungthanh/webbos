@@ -1,0 +1,8 @@
+.header {
+    background-color: map-get($colors, "blue-200");
+    &__top {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+}

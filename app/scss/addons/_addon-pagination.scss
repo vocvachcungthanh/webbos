@@ -1,0 +1,42 @@
+@media (min-width: 230px) {
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 3rem;
+        grid-gap: 1.1rem;
+        li {
+            &.active,
+            &:hover {
+                a {
+                    background-color: map-get($colors, "white-100");
+                    color: #fff;
+                }
+            }
+            a {
+                color: #c4c4c4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.8rem;
+                height: 2.8rem;
+                background: #ffffff;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 2px;
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .control__pagintaion {
+        margin-top: -32px;
+        margin-left: auto;
+        .pagination {
+            justify-content: flex-end;
+            margin-top: 0;
+        }
+    }
+}

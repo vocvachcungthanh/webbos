@@ -1,0 +1,263 @@
+@media (min-width: 230px) {
+    .addon__menu {
+        --color: #000;
+        --colorHover: #f7b109;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        visibility: hidden;
+        opacity: 0;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            .box__menu {
+                transform: translateX(0);
+            }
+        }
+        .box__menu {
+            max-width: 230px;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-110%);
+            transition: transform 0.3s ease;
+            .menu {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                .menu__list {
+                    position: relative;
+                    .menu__link {
+                        display: block;
+                        color: #fff;
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        line-height: 40px;
+                        padding: 0 15px;
+                        border-bottom: 1px solid #fff;
+                        display: block;
+                        width: 100%;
+                        white-space: nowrap;
+                    }
+                    &:last-child {
+                        .menu__link {
+                            border-bottom: 0;
+                        }
+                    }
+                    &.active {
+                        > .menu__link {
+                            font-weight: bold;
+                        }
+                    }
+                    ul {
+                        display: none;
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none;
+                        background-color: #fff;
+                        li {
+                            position: relative;
+
+                            a {
+                                color: #006885;
+                                display: block;
+                                width: 100%;
+                                font-weight: 300;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                line-height: 35px;
+                                padding-left: 35px;
+                                padding-right: 15px;
+                            }
+                            &:hover {
+                                background-color: #ebf1f2;
+                                &::before {
+                                    border-color: var(--colorHover);
+                                }
+                            }
+                        }
+                    }
+                    .btn__childrens {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 5px;
+                        right: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 20px;
+                        overflow: hidden;
+                        border: 0;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 3px;
+                        background: #000;
+                        color: #fff;
+                        &::before {
+                            content: "+";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: #fff;
+                            transition: color 0.3s ease, transform 0.3s ease;
+                        }
+                        &.active {
+                            &::before {
+                                color: #f7b109;
+                                transform: translate(-50%, -50%) rotate(45deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .toggle__menu {
+        width: 3rem;
+        height: 3rem;
+        border: 0px;
+        background-color: #f7b109;
+        margin: auto 0 auto 15px;
+        border-radius: 3px;
+        padding: 0;
+        img {
+            max-width: 15px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .addon__menu {
+        position: unset;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        z-index: unset;
+        visibility: unset;
+        opacity: 1;
+        .box__menu {
+            max-width: 100%;
+            transform: unset;
+            height: auto;
+            .menu {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                .menu__list {
+                    .menu__link {
+                        border-bottom: 0;
+                        font-size: 1.5rem;
+                        line-height: 20px;
+                        color: #fff;
+                        padding: 2rem 2.2rem;
+
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 0;
+                            height: 0.4rem;
+                            border-radius: 999px;
+                            background-color: map-get($colors, "green-200");
+                            transition: 0.2s all;
+                        }
+                    }
+                    &:hover {
+                        .menu__link {
+                            &::before {
+                                transition: 0.2s all;
+                                width: calc(100% - 4rem);
+                            }
+                        }
+                        ul {
+                            transition: 0.3s all;
+                            transform: perspective(0px) rotateX(0);
+                            transform-origin: 0% 0%;
+                        }
+                    }
+                    &.active {
+                        .menu__link {
+                            background-color: #006885;
+
+                            &::before {
+                                transition: 0.2s all;
+                                width: calc(100% - 4rem);
+                            }
+                        }
+                    }
+                    ul {
+                        z-index: 999;
+                        display: block;
+                        position: absolute;
+                        min-width: 220px;
+                        top: 100%;
+                        right: 0;
+                        background-color: map-get($colors, "white-100");
+                        transform: perspective(600px) rotateX(-90deg);
+                        transform-origin: 0% 0%;
+                        transition: 0.3s all;
+                        filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.15));
+                        li {
+                            &::before {
+                                display: none;
+                            }
+                            a {
+                                padding: 0.6rem 1.2rem;
+                                font-size: 1.3rem;
+                                line-height: 1.523rem;
+                                white-space: unset;
+                                text-overflow: unset;
+                                color: map-get($colors, "black-900");
+                            }
+                            &:hover {
+                                a {
+                                    background-color: map-get(
+                                        $colors,
+                                        "blue-100"
+                                    ) !important;
+                                }
+                            }
+                            &:nth-child(odd) {
+                                a {
+                                    background-color: map-get(
+                                        $colors,
+                                        "gray-100"
+                                    );
+                                }
+                            }
+                        }
+                    }
+                    .btn__childrens {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .toggle__menu {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .addon__menu {
+        .box__menu {
+            .menu {
+                .menu__list {
+                    .menu__link {
+                        font-size: 1.6rem;
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

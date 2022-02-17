@@ -1,0 +1,97 @@
+{
+    "menus": [
+        {
+            "_id": 1,
+            "name": "Trang chủ",
+            "link": "index.html",
+            "status": "home",
+            "omegamenu": false,
+            "childrens": null
+        },
+        {
+            "_id": 2,
+            "name": "Giới thiệu",
+            "link": "page__introduce.html",
+            "status": "introduce",
+            "omegamenu": false,
+            "childrens": null
+        },
+        {
+            "_id": 3,
+            "name": "Sản phẩm",
+            "link": "detail__braces.html",
+            "omegamenu": false,
+            "status": "braces",
+            "childrens": null
+        },
+        {
+            "_id": 4,
+            "name": "Bảng giá",
+            "link": "detail__porcelain-teeth.html",
+            "status": "porcelain",
+            "omegamenu": true,
+            "childrens": null
+        },
+
+        {
+            "_id": 5,
+            "name": "Tin tức",
+            "link": "detail__planting-implant-teeth.html",
+            "status": "implant",
+            "omegamenu": false,
+            "childrens": [
+                {
+                    "name": "Quản trị doanh nghiệp",
+                    "link": "detail__planting-implant-teeth.html"
+                },
+                {
+                    "name": "Quản trị Nhân sự",
+                    "link": "detail__planting-implant-teeth.html"
+                },
+                {
+                    "name": "Marketing - Bán hàng",
+                    "link": "detail__planting-implant-teeth.html"
+                },
+                {
+                    "name": "Quản trị dự án & công việc",
+                    "link": "detail__planting-implant-teeth.html"
+                },
+                {
+                    "name": "Kiến thức hữu ích",
+                    "link": "detail__planting-implant-teeth.html"
+                },
+                {
+                    "name": "Tính năng mới",
+                    "link": "detail__planting-implant-teeth.html"
+                }
+            ]
+        },
+
+        {
+            "_id": 6,
+            "name": "Tuyển dụng",
+            "link": "detail__treatment-teeth.html",
+            "status": "treatment",
+            "omegamenu": false,
+            "childrens": null
+        },
+
+        {
+            "_id": 7,
+            "name": "Hỗ trợ",
+            "link": "page__result.html",
+            "status": "result",
+            "childrens": null,
+            "omegamenu": false
+        },
+
+        {
+            "_id": 8,
+            "name": "Liên hệ",
+            "link": "page__news.html",
+            "omegamenu": false,
+            "status": "news",
+            "childrens": null
+        }
+    ]
+}

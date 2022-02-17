@@ -1,0 +1,19 @@
+@media (min-width: 230px) {
+    .logo {
+        max-width: 50px;
+        width: 100%;
+        padding: 1rem 0;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .logo {
+        max-width: 124.38px;
+        padding: 0;
+    }
+}

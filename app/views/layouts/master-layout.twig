@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="robots" , content="index, follow">
+		<title>
+			{% block titlePage %}{% endblock %}
+		</title>
+		{% include "../includes/link.twig" %}
+		{% block stylePage %}{% endblock %}
+	</head>
+
+	<body {% if block("bodyClass") is defined %} class="{% block bodyClass %}{% endblock %}" {% endif %}>
+		<div class="wrapper">
+			{% include "./layoutHeader.twig" %}
+			<main id="main" {% if block("mainClass") is defined %} class="{% block mainClass %}{% endblock %}" {% endif %}> {% block content %}{% endblock %}
+				</main>
+
+			</div>
+			{% include "./layoutFooter.twig" %}
+			{% include "../includes/scripts.twig" %}
+			{% block scriptPage %}{% endblock %}
+		</body>
+
+	</html>

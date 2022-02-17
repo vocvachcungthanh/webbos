@@ -1,0 +1,103 @@
+@mixin flexbox($justify: flex-start, $align: center, $wrap: wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin cutone($width: 100%) {
+    width: $width;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin cutlimit($width: 100%, $line-height: 24px, $lineClamp: 3) {
+    width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: $line-height;
+    -webkit-line-clamp: $lineClamp;
+    display: -webkit-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+}
+
+@mixin customScrollbar(
+    $width: 10px,
+    $track: #f1f1f1,
+    $thumb: #888,
+    $hover: #555
+) {
+    &::-webkit-scrollbar {
+        width: $width;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $track;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $thumb;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: $hover;
+    }
+}
+
+@mixin posAbsolute($pos, $x, $y) {
+    position: absolute;
+
+    @if $pos== "tl" {
+        top: $y;
+        left: $x;
+    } @else if $pos== "tr" {
+        top: $y;
+        right: $x;
+    } @else if $pos== "bl" {
+        bottom: $y;
+        left: $x;
+    } @else if $pos== "br" {
+        bottom: $y;
+        right: $x;
+    } @else if $pos== "cx" and $x==50% {
+        left: $x;
+        top: $y;
+        transform: translateX(-$x);
+    } @else if $pos== "cy" and $y==50% {
+        left: $x;
+        top: $y;
+        transform: translateY(-$y);
+    } @else if $pos== "center" and $x==50% and $y==50% {
+        left: $x;
+        top: $y;
+        transform: translate(-$x, -$y);
+    }
+}
+
+@mixin arrow($arrow: "top", $color: #000, $size: 10px) {
+    width: 0;
+    height: 0;
+
+    @if $arrow== "top" {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+    } @else if $arrow== "bottom" {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+    } @else if $arrow== "left" {
+        border-left: $size solid $color;
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+    } @else if $arrow== "right" {
+        border-right: $size solid $color;
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+    }
+}
+@mixin aspectRatio($w, $h) {
+    padding-top: ($h / $w) * 100%;
+}

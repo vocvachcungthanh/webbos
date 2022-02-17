@@ -1,0 +1,86 @@
+.bs-tab {
+    .tab-control {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .bs__title {
+            font-family: "SVN-Aptima";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 3.6rem;
+            color: $primary;
+            line-height: 5.4rem;
+        }
+        .control-list {
+            margin: 0;
+            padding: 0;
+            margin-left: auto;
+            list-style-type: disc;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .control-list__item {
+                font-size: 1.6rem;
+                text-decoration: none;
+                font-weight: 500;
+                list-style-type: none;
+                cursor: pointer;
+                color: #454545;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                &:nth-last-of-type(1) {
+                    margin-bottom: 0;
+                }
+                &.active,
+                &:hover {
+                    color: $primary;
+                    z-index: 1;
+                    transition: all 0.3s ease;
+                }
+                &+.control-list__item {
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+    .tab-content {
+        width: 100%;
+        min-height: 200px;
+        .tab-item {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .bs-tab {
+        .tab-control {
+            .bs__title {
+                font-size: 3rem;
+            }
+            .control-list {
+                margin-top: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bs-tab {
+        .tab-control {
+            flex-wrap: wrap;
+            .bs__title {}
+            .control-list {
+                justify-content: flex-start;
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.bs-tab {
+    &.tab-left {
+        padding-left: 100px;
+        .tab-container {
+            position: relative;
+            .tab-control {
+                position: absolute;
+                right: 100%;
+                border-bottom: 0;
+                border-right: 2px solid green;
+                top: 0;
+                .control-list {
+                    .control-list__item {
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 15px;
+                    }
+                }
+            }
+            .tab-content {
+                padding-top: 0;
+                padding-left: 30px;
+            }
+        }
+    }
+    .tab-control {
+        position: relative;
+        .control__show {
+            display: none;
+        }
+        .control-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: disc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            .control-list__item {
+                padding: 0 2.4rem;
+                background: #ffffff;
+                border: 1px solid $colorBorder;
+                box-sizing: border-box;
+                border-radius: 2rem;
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                list-style-type: none;
+                height: 4.5rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                margin: 0 1.5rem;
+                color: $colorBorder;
+                &.active,
+                &:hover {
+                    background: #fff;
+                    color: #fff;
+                    border: 1px solid $colorBorder;
+                    z-index: 1;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+    .tab-content {
+        min-height: 200px;
+        .tab-item {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bs-tab {
+        .tab-control {
+            .control__show {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .bs-tab {
+        .tab-control {
+            .control-list {
+                .control-list__item {
+                    height: 4rem;
+                    padding: 0 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+    .bs-tab {
+        .tab-control {
+            .control-list {
+                flex-direction: column;
+                .control-list__item {
+                    font-size: 1.6rem;
+                    &+.control-list__item {
+                        margin-top: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
