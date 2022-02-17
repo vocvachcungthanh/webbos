@@ -185,8 +185,6 @@
                     }
                     &.active {
                         .menu__link {
-                            background-color: #006885;
-
                             &::before {
                                 transition: 0.2s all;
                                 width: calc(100% - 4rem);
