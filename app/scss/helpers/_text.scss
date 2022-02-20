@@ -1,5 +1,8 @@
 .text {
     &__blue {
+        &--50 {
+            color: map-get($colors, "blue-50");
+        }
         &--100 {
             color: map-get($colors, "blue-100");
         }
@@ -28,7 +31,7 @@
             color: map-get($colors, "blue-900");
         }
     }
-    &__gary {
+    &__gray {
         &--100 {
             color: map-get($colors, "gray-100");
         }
@@ -50,7 +53,7 @@
     }
     &__green {
         &--200 {
-            color: map-get($colors, "green-100");
+            color: map-get($colors, "green-200");
         }
     }
     &__violet {
@@ -58,9 +61,22 @@
             color: map-get($colors, "violet-500");
         }
     }
+    &__violet {
+        &--600 {
+            color: map-get($colors, "violet-600");
+        }
+    }
     &__white {
         &--100 {
             color: map-get($colors, "white-100");
         }
+    }
+    &__black {
+        &--900 {
+            color: map-get($colors, "black-900");
+        }
+    }
+    &__center {
+        text-align: center;
     }
 }

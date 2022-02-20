@@ -1,0 +1,18 @@
+.d {
+    &__flex {
+        display: flex;
+    }
+    &__inline {
+        &--flex {
+            display: inline-flex;
+        }
+    }
+    &__block {
+        display: block;
+    }
+    &__inline {
+        &--block {
+            display: inline-block;
+        }
+    }
+}

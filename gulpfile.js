@@ -135,6 +135,7 @@ function pages() {
             })
         )
         .pipe(sass())
+        .pipe(minifyCss())
         .pipe(
             autoprefixer({
                 browsers: autoprefixerBrowsers,

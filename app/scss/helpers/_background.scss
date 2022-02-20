@@ -1,5 +1,8 @@
 .bgc {
     &__blue {
+        &--50 {
+            background-color: map-get($colors, "blue-50");
+        }
         &--100 {
             background-color: map-get($colors, "blue-100");
         }
@@ -28,7 +31,7 @@
             background-color: map-get($colors, "blue-900");
         }
     }
-    &__gary {
+    &__gray {
         &--100 {
             background-color: map-get($colors, "gray-100");
         }
@@ -58,9 +61,19 @@
             background-color: map-get($colors, "violet-500");
         }
     }
+    &__violet {
+        &--600 {
+            background-color: map-get($colors, "violet-600");
+        }
+    }
     &__white {
         &--100 {
             background-color: map-get($colors, "white-100");
+        }
+    }
+    &__black {
+        &--900 {
+            background-color: map-get($colors, "black-900");
         }
     }
 }

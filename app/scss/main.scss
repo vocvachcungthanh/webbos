@@ -6,6 +6,7 @@
 @import "helpers/mixins";
 @import "./helpers/background";
 @import "./helpers/text";
+@import "./helpers/dispalay";
 
 /**
 * @base
@@ -29,3 +30,9 @@
 
 @import "./layouts/layoutHeader";
 @import "./layouts/layoutFooter";
+
+/**
+* @component
+*/
+
+@import "./components/Banner.component";

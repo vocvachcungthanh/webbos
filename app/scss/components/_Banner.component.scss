@@ -1,0 +1,132 @@
+.banner {
+    padding-top: 13.981rem;
+    padding-bottom: 9.687rem;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        background: url("../images/bg__banner.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__group {
+        column-gap: 2.401rem;
+        position: relative;
+        z-index: 9;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 5.915rem;
+        line-height: 6.932rem;
+        margin-bottom: 0;
+    }
+    &__info {
+        margin-top: 1.2rem;
+        font-size: 2.976rem;
+        font-weight: 700;
+        line-height: 3.571rem;
+        margin-bottom: 0;
+    }
+    &__desc {
+        margin-top: 6.4rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.109rem;
+        margin-bottom: 0;
+    }
+    &__content {
+        margin-top: 7.619rem;
+        flex: 1;
+    }
+    &__image {
+        max-width: 670.04px;
+        flex-shrink: 0;
+        padding-top: 45.568%;
+        animation: keyframe_image 1.5s infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    .banner__btn {
+        margin-top: 3.2rem;
+        animation: button_keyframes 0.5s infinite;
+        animation-direction: alternate-reverse;
+    }
+}
+.banner__animation {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    .circle {
+        border-radius: 100%;
+        position: absolute;
+        border: 1px solid #5fd58c;
+        width: 341.87px;
+        height: 341.87px;
+
+        &__1 {
+            opacity: 0.5;
+
+            bottom: 3.5%;
+            right: 32%;
+            animation: circle__1 3s infinite;
+            animation-direction: alternate-reverse;
+        }
+        &__2 {
+            opacity: 0.1;
+            bottom: 20%;
+            right: 10%;
+            animation: circle__1 4s infinite;
+            animation-direction: alternate-reverse;
+        }
+        &__3 {
+            animation: circle__1 4s infinite;
+            animation-direction: alternate-reverse;
+
+            opacity: 0.2;
+            top: -7%;
+            right: 20%;
+            width: 230px;
+            height: 230px;
+        }
+    }
+}
+
+@keyframes circle__1 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes button_keyframes {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(15%);
+    }
+}
+@keyframes keyframe_image {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(5%);
+    }
+}

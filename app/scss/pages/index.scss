@@ -1,4 +1,262 @@
-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+/**
+*@helpers
+*/
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+.establish {
+    padding: 5.91rem 0;
+    overflow: hidden;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../../images/after__establish.png") no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        height: 176.86px;
+    }
+
+    &__group {
+        column-gap: 6.905rem;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__desc {
+        margin-top: 2.4rem;
+        line-height: 2.6rem;
+    }
+    &__image {
+        max-width: 626.95px;
+        flex-shrink: 0;
+
+        padding-top: 45.525%;
+
+        &--link {
+            object-fit: contain;
+            object-position: left;
+        }
+    }
+}
+.different {
+    padding-top: 5.6rem;
+    padding-bottom: 2.16rem;
+
+    &__group {
+        max-width: 966.47px;
+        margin: 0 auto;
+        column-gap: 2.305rem;
+        align-items: center;
+        &:nth-child(even) {
+            margin-top: 3.26rem;
+            .different {
+                &__content {
+                    order: 2;
+                }
+                &__image {
+                    order: 1;
+                }
+            }
+        }
+    }
+    &__image {
+        max-width: 371.01px;
+        padding-top: 28.5445%;
+        flex-shrink: 0;
+
+        padding-top: 34.4376%;
+
+        &--link {
+            object-fit: contain;
+        }
+    }
+
+    &__content {
+        flex-wrap: wrap;
+        column-gap: 2.397rem;
+    }
+    &__title {
+        display: flex 1;
+        margin-bottom: 4rem;
+    }
+    &__item {
+        flex: calc(50% - 2.397rem);
+        &--title {
+            font-size: 2rem;
+            line-height: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            margin-top: 2.4rem;
+        }
+    }
+    &__icon {
+        width: 74px;
+        height: 74px;
+        overflow: hidden;
+        border-radius: 100%;
+
+        &--link {
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__desc {
+        text-align: justify;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 400;
+        margin-top: 1.6rem;
+    }
+}
+.tools {
+    padding-top: 3.6rem;
+    padding-bottom: 6.5rem;
+
+    &__bos {
+        border-radius: 5.4rem 0;
+        overflow: hidden;
+
+        max-width: 274.05px;
+        width: 100%;
+        flex-shrink: 0;
+        padding: 2.9rem 3.2rem 2.4rem 3.2rem;
+        &--work {
+            box-shadow: 4px 4px 10px rgba(148, 196, 161, 0.8);
+            .tools__bos--btn {
+                &:hover {
+                    color: map-get($colors, "blue-500");
+                }
+            }
+        }
+        &--hrm {
+            box-shadow: 0px 4px 10px rgba(39, 80, 209, 0.8);
+            .tools__bos--btn {
+                &:hover {
+                    color: map-get($colors, "white-100");
+                }
+            }
+        }
+        &--crm {
+            box-shadow: 4px 4px 10px rgba(121, 138, 193, 0.8);
+            .tools__bos--btn {
+                &:hover {
+                    color: map-get($colors, "white-100");
+                }
+            }
+        }
+        &--title {
+            font-size: 24px;
+            line-height: 79%;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+        }
+        &--info {
+            font-size: 1.4rem;
+        }
+        &--btn {
+            margin-top: 3.5rem;
+            border-radius: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+    &__group {
+        margin-top: 4rem;
+        align-items: center;
+        transition: box-shadow 0.2s ease border-radius 0.2s ease;
+        &:hover {
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
+            border-radius: 5.4rem 0.8rem 4rem 0px;
+            transition: box-shadow 0.2s ease border-radius 0.2s ease;
+        }
+    }
+    &__list {
+        flex-wrap: wrap;
+        column-gap: 7.5rem;
+        padding-left: 2.398rem;
+        row-gap: 2.52rem;
+    }
+    &__item {
+        max-width: calc((100% / 3) - 5rem);
+        width: 100%;
+        &--icon {
+            width: 5.2rem;
+            height: 5.2rem;
+            border-radius: 100%;
+            overflow: hidden;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        &--desc {
+            padding-left: 0.8rem;
+        }
+        &--title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 2rem;
+            margin-bottom: 0;
+        }
+        &--info {
+            margin-top: 1.2rem;
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+    &__icon {
+        &--link {
+            object-fit: contain;
+        }
+    }
+    &__next {
+        align-items: center;
+        img {
+            width: 3.4rem;
+            height: 3.4rem;
+            object-fit: contain;
+            margin-right: 1.65rem;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+    }
+}
+.feedback {
+    padding: 6rem 0;
+    &__container {
+        border-radius: 0px 32px;
+        padding-top: 4.012rem;
+        padding-bottom: 8.192rem;
+        padding-left: 10rem;
+    }
+}
+
+.news {
+    padding-top: 7.215rem;
+    padding-bottom: 6.4rem;
+    &__header {
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__view {
+        align-items: center;
+        font-style: italic;
+        font-size: 1.6rem;
+        &:hover {
+            opacity: 0.8;
+            color: map-get($colors, "blue-400");
+        }
+        img {
+            width: 3.2rem;
+            height: 3.2rem;
+            object-fit: contain;
+            margin-left: 0.8rem;
+        }
+    }
 }
