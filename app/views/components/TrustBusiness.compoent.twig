@@ -1,0 +1,42 @@
+<section class="trust-business">
+	<div class="container">
+		<h2 class="title__global text__blue--200 text__center ">
+			+2.500 doanh nghiệp & + 500.000 người đã tin dùng
+		</h2>
+		<div class="trust-business__body">
+			<div class="trust-business__slider">
+				{% for item in 1..24 %}
+					<div class="trust-business__item">
+						<div class="trust-business__box">
+							<div class="trust-business__image frame">
+								<img src="images/logo__{{loop.index}}.svg" alt="logo__{{loop.index}}.svg">
+							</div>
+						</div>
+					</div>
+					<div class="trust-business__item">
+						<div class="trust-business__box">
+							<div class="trust-business__image frame">
+								<img src="images/logo__{{loop.index}}.svg" alt="logo__{{loop.index}}.svg">
+							</div>
+						</div>
+					</div>
+					<div class="trust-business__item">
+						<div class="trust-business__box">
+							<div class="trust-business__image frame">
+								<img src="images/logo__{{loop.index}}.svg" alt="logo__{{loop.index}}.svg">
+							</div>
+						</div>
+					</div>
+					<div class="trust-business__item">
+						<div class="trust-business__box">
+							<div class="trust-business__image frame">
+								<img src="images/logo__{{loop.index}}.svg" alt="logo__{{loop.index}}.svg">
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+</section>

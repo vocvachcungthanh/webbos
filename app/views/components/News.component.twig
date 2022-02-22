@@ -1,21 +1,24 @@
-<div class="news__group">
-	<div class="news__image frame">
-		<img src="images/news__1.jpg" alt="news__1.jpg">
-	</div>
-	<h3 class="news__title">
-		<a href="#" class="news__title--link" title="Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS">
-			Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS
+{% for item in newsArray %}
+	<div class="news__group">
+		<a href="detail__news.html" title="Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS" class="news__image frame">
+			<img src="images/news__{{loop.index}}.jpg" alt="news__{{loop.index}}.jpg">
 		</a>
-	</h3>
-	<div class="news__desc">
-		Tất cả những công việc lớn lao đều phải bắt đầu bằng từng bước nhỏ, việc chuẩn hóa dữ liệu cũng vậy, muốn công ty hoạt động hiệu quả bao nhiêu thì phần mềm quản trị cũng cần chuẩn bấy nhiêu.
+		<h3 class="news__title">
+			<a href="detail__news.html" class="news__title--link text__gray--700" title="Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS">
+				Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS
+			</a>
+		</h3>
+		<div class="news__desc text__gray--500">
+			Tất cả những công việc lớn lao đều phải bắt đầu bằng từng bước nhỏ, việc chuẩn hóa dữ liệu cũng vậy, muốn công ty hoạt động hiệu quả bao nhiêu thì phần mềm quản trị cũng cần chuẩn bấy nhiêu.
+		</div>
+		<div class="news__footer">
+			<a href="detail__news.html" class="news__continue-reading text__gray--700" title="Đọc tiếp">
+				Đọc tiếp >
+			</a>
+			<time class="news__time text__gray--600">
+				12/12/2022
+			</time>
+		</div>
 	</div>
-	<div class="news__footer">
-		<a href="#" class="news__contiue-reading--link" title="Đọc tiếp">
-			Đọc tiếp >
-		</a>
-		<time class="news__time">
-			12/12/2022
-		</time>
-	</div>
-</div>
+
+{% endfor %}

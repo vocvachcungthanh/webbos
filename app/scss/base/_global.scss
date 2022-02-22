@@ -29,3 +29,21 @@ a {
     line-height: 4.33rem;
     margin-bottom: 0;
 }
+
+.global {
+    &__view {
+        align-items: center;
+        font-style: italic;
+        font-size: 1.6rem;
+        &:hover {
+            opacity: 0.8;
+            color: map-get($colors, "blue-400");
+        }
+        img {
+            width: 3.2rem;
+            height: 3.2rem;
+            object-fit: contain;
+            margin-left: 0.8rem;
+        }
+    }
+}

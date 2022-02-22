@@ -1,0 +1,94 @@
+<footer id="footer" class="bgc__blue--800 footer">
+	<div class="container">
+		<h2 class="title__global text__white--100 text__center">
+			Liên hệ với chúng tôi
+		</h2>
+		<div class="footer__body">
+			{% for item in 1..6 %}
+				<div class="footer__item d__flex">
+					<div class="footer__icon d__flex">
+						<img src="images/icons/icon__footer__{{loop.index}}.svg" alt="icon__footer__{{loop.index}}.svg">
+					</div>
+					<div class="footer__content">
+						<h3 class="footer__content--title">
+							<a class="text__white--100" href="tel:19003789" title="19003789">
+								19003789 - Chăm sóc khách hàng
+							</a>
+						</h3>
+						<div class="footer__content--desc text__white--100">
+							<p class="footer__content--p">
+								Hoạt  động các ngày trong tuần từ T2 đến T7,
+							</p>
+							<time>
+								8:00 đến 17h:30.
+							</time>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<div class="container">
+			<div class="footer__bottom--group d__flex">
+				<div class="footer__bottom--item">
+					<h3 class="footer__bottom--title text__white--100">
+						CÔNG TY CỔ PHẦN GIẢI PHÁP QUẢN TRỊ BOS
+
+					</h3>
+					<a title="click để xem google map" target="_blank" href="https://goo.gl/maps/AoHGLeyixvcZRkwT9" class="footer__address">
+						Trụ sở chính: phòng 3005, tòa 34T, đường Hoàng Đạo Thúy, quận Cầu Giấy, thành phố Hà Nội, Việt Nam
+
+					</a>
+					<p class="footer__copyright ">
+						BOS © 2022 All Rights Reserved
+					</p>
+				</div>
+				<div class="footer__bottom--item">
+					<ul class="footer__list">
+						{% for item in menus %}
+							{% if loop.index > 1 %}
+								<li class="footer__item {{ item.status == pages ? 'active' : '' }}">
+									<a href={{item.link}} class="footer__item--link" title={{item.name}}>
+										{{item.name}}
+									</a>
+								</li>
+							{% endif %}
+
+						{% endfor %}
+
+					</ul>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__item--link" title="Điều khoản">
+								Điều khoản
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__item--link" title="Chính sách bảo mật">
+								Chính sách bảo mật
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__item--link" title="Khách hàng">
+								Khách hàng
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="footer__bottom--item">
+					<a class="d__flex" href="tel:083 483 6868" title="083 483 6868">
+						Tư vấn sản phẩm: 083 483 6868
+					</a>
+					<a class="d__flex" href="tel:19006868" title="19006868">
+						Chăm sóc khách hàng: 19006868
+					</a>
+					<a class="d__flex" href="mailto:support@bos.vn" title="support@bos.vn">
+						Email: support@bos.vn
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

@@ -365,61 +365,24 @@
 			</div>
 		</div>
 	</section>
-	<section class="feedback bgc__gray--100">
-		<div class="container">
-			<div class="feedback__container bgc__white--100">
-				<h2 class="title__global text__blue--200">
-					Câu chuyện của khách hàng
-				</h2>
-			</div>
-
-		</div>
-	</section>
+	{% include "../components/Feedback.component.twig" %}
 	<section class="news">
 		<div class="container">
 			<div class="news__header d__flex">
 				<h2 class="title__global text__blue--200">
 					Tin tức
 				</h2>
-				<a href="#" class="news__view d__flex text__blue--400" title="Xem thêm">
-					<span class="news__view--text">
-						Xem thêm
-					</span>
-					<img src="images/icons/icon__view.svg" alt="icon__view.svg">
-				</a>
+				{% set link = "page__news.html" %}
+				{% include "../components/View.component.twig" with link %}
 			</div>
 			<div class="news__body">
-				{% for key, item in 1..3 %}
-					<div class="news__group">
-						<div class="news__image frame">
-							<img src="images/news__{{key + 1}}.jpg" alt="news__{{key + 1}}.jpg">
-						</div>
-						<h3 class="news__title">
-							<a href="#" class="news__title--link" title="Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS">
-								Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS
-
-							</a>
-						</h3>
-						<div class="news__desc">
-							Tất cả những công việc lớn lao đều phải bắt đầu bằng từng bước nhỏ, việc chuẩn hóa dữ liệu cũng vậy, muốn công ty hoạt động hiệu quả bao nhiêu thì phần mềm quản trị cũng cần chuẩn bấy nhiêu.
-						</div>
-						<div class="news__footer">
-							<a href="#" class="news__contiue-reading--link" title="Đọc tiếp">
-								Đọc tiếp >
-							</a>
-							<time class="news__time">
-								12/12/2022
-							</time>
-						</div>
-					</div>
-
-				{% endfor %}
+				{% set newsArray = 1..3 %}
+				{% include "../components/News.component.twig" with newsArray %}
 			</div>
 		</div>
 	</section>
+	{% include "../components/TrustBusiness.compoent.twig" %}
 {% endblock %}
 {% block scriptPage %}
-	<script type="text/javascript"></script>
-
 	<script type="module"></script>
 {% endblock %}

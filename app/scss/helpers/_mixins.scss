@@ -5,14 +5,14 @@
     flex-wrap: $wrap;
 }
 
-@mixin cutone($width: 100%) {
+@mixin cutOne($width: 100%) {
     width: $width;
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-@mixin cutlimit($width: 100%, $line-height: 24px, $lineClamp: 3) {
+@mixin cutLimit($width: 100%, $line-height: 24px, $lineClamp: 3) {
     width: $width;
     overflow: hidden;
     text-overflow: ellipsis;

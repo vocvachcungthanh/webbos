@@ -1,27 +1,22 @@
 <div class="addon__menu">
-    <div class="box__menu">
-        <ul class="menu">
-            {% for item in menus %}
-            <li class="menu__list {{ item.status == pages ? 'active' : '' }} ">
-                <a
-                    href="{{ item.link }}"
-                    class="menu__link"
-                    title="{{ item.name }}"
-                    >{{ item.name }}</a
-                >
-                {% if item.childrens %}
-                <ul class="{{item.omegamenu ? 'meagmenu'}}">
-                    {% for value in item.childrens %}
-                    <li>
-                        <a href="{{ value.link }}" title="{{ value.name }}">{{
+	<div class="box__menu">
+		<ul class="menu">
+			{% for item in menus %}
+				<li class="menu__list {{ item.status == pages ? 'active' : '' }} ">
+					<a href="{{ item.link }}" class="menu__link" title="{{ item.name }}">{{ item.name }}</a>
+					{% if item.childrens %}
+						<ul class="{{item.omegamenu ? 'meagmenu'}}">
+							{% for value in item.childrens %}
+								<li>
+									<a href="{{ value.link }}" title="{{ value.name }}">{{
                             value.name
                         }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
 </div>

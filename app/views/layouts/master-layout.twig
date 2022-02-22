@@ -17,12 +17,12 @@
 
 	<body {% if block("bodyClass") is defined %} class="{% block bodyClass %}{% endblock %}" {% endif %}>
 		<div class="wrapper">
-			{% include "./layoutHeader.twig" %}
+			{% include "../components/Header.component.twig" %}
 			<main id="main" {% if block("mainClass") is defined %} class="{% block mainClass %}{% endblock %}" {% endif %}> {% block content %}{% endblock %}
 				</main>
 
 			</div>
-			{% include "./layoutFooter.twig" %}
+			{% include "../components/Footer.component.twig" %}
 			{% include "../includes/scripts.twig" %}
 			{% block scriptPage %}{% endblock %}
 		</body>

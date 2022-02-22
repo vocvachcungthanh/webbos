@@ -30,6 +30,9 @@
         &--900 {
             background-color: map-get($colors, "blue-900");
         }
+        &--1000 {
+            background-color: map-get($colors, "blue-1000");
+        }
     }
     &__gray {
         &--100 {
@@ -49,6 +52,9 @@
         }
         &--600 {
             background-color: map-get($colors, "gray-600");
+        }
+        &--700 {
+            background-color: map-get($colors, "gray-700");
         }
     }
     &__green {
