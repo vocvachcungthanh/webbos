@@ -1,0 +1,105 @@
+/**
+*@helpers
+*/
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+.vision {
+    padding-top: 10.5rem;
+    padding-bottom: 8rem;
+    position: relative;
+    background-image: url("../../images/bg__introduce.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url("../../images/after__introduce.svg") no-repeat;
+        background-size: cover;
+        height: 15%;
+        background-position: bottom;
+        z-index: -1;
+    }
+    &__desc {
+        &--text {
+            padding-top: 4.8rem;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            max-width: 77rem;
+            width: 100%;
+            margin: 0 auto;
+            p {
+                margin-bottom: 3.6rem;
+                &:first-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+            margin: 3.2rem auto;
+        }
+    }
+
+    .core {
+        &__container {
+            padding-top: 2.832rem;
+        }
+        &__group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 9.1rem;
+            margin-top: 4.8rem;
+        }
+        &__box {
+            transition: 0.3s all;
+            transform: translateY(0);
+            &:hover {
+                transition: 0.3s all;
+                transform: translateY(-5%);
+            }
+            &--image {
+                padding-top: 76.295%;
+            }
+            &--title {
+                @include cutOne();
+                margin-top: 3.2rem;
+                margin-bottom: 1.6rem;
+                font-size: 2.4rem;
+                line-height: 2.88rem;
+                font-weight: 700;
+            }
+            &--desc {
+                font-size: 1.4rem;
+                line-height: 2rem;
+                p {
+                    margin-bottom: 1.2rem;
+                }
+            }
+            &--list {
+                list-style-type: none;
+                padding: 0;
+                margin-bottom: 0;
+            }
+            &--item {
+                align-items: start;
+                &:not(:last-child) {
+                    margin-bottom: 0.8rem;
+                }
+            }
+        }
+        &__icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            flex-shrink: 0;
+            margin-right: 0.4rem;
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
 	<div class="box__menu">
 		<ul class="menu">
 			{% for item in menus %}
-				<li class="menu__list {{ item.status == pages ? 'active' : '' }} ">
+				<li class="menu__list {{ item.status == page ? 'active' : '' }} ">
 					<a href="{{ item.link }}" class="menu__link" title="{{ item.name }}">{{ item.name }}</a>
 					{% if item.childrens %}
 						<ul class="{{item.omegamenu ? 'meagmenu'}}">

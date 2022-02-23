@@ -1,0 +1,95 @@
+.product {
+    box-shadow: 0 0.4rem 1rem #d6d6d6;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    padding: 2.4rem 2rem;
+    transform: translateY(0);
+    transition: 0.3s all;
+    &:hover {
+        transition: 0.3s all;
+        transform: translateY(-7%);
+    }
+    &--blue {
+        &:hover {
+            transition: 0.3s all;
+            box-shadow: 0 0.4rem 1rem rgba(39, 80, 209, 0.8);
+        }
+        .product__body {
+            &--link {
+                color: map-get($colors, "blue-200");
+            }
+        }
+        .product__footer {
+            &--icon {
+                background-color: map-get($colors, "blue-500");
+                img {
+                    filter: brightness(88.5);
+                }
+            }
+        }
+    }
+    &--green {
+        &:hover {
+            transition: 0.3s all;
+            box-shadow: 0 0.4rem 1rem rgba(148, 196, 161, 0.8);
+        }
+        .product__body {
+            &--link {
+                color: map-get($colors, "green-200");
+            }
+        }
+        .product__footer {
+            &--icon {
+                background-color: map-get($colors, "green-200");
+            }
+        }
+    }
+    &__image {
+        padding-top: 63.29%;
+        img {
+            object-fit: contain;
+            object-position: center center;
+        }
+    }
+    &__body {
+        padding-top: 1.936rem;
+        &--title {
+            @include cutOne();
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 2.109rem;
+            margin-bottom: 0.8rem;
+        }
+        &--desc {
+            @include cutLimit($lineClamp: 2);
+            font-size: 1.3rem;
+            line-height: 1.523rem;
+        }
+    }
+    &__footer {
+        margin-top: 2.363rem;
+        border-top: 1px solid map-get($colors, "gray-200");
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1.2rem;
+        &--icon,
+        &--next {
+            width: 3.6rem;
+            height: 3.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 100%;
+            img {
+                object-fit: contain;
+                object-position: center center;
+            }
+        }
+        &--view {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+        }
+    }
+}

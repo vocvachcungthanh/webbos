@@ -213,6 +213,7 @@
     &__icon {
         &--link {
             object-fit: contain;
+            filter: brightness(45.5);
         }
     }
     &__next {

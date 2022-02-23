@@ -11,7 +11,7 @@
         {
             "_id": 2,
             "name": "Giới thiệu",
-            "link": "page__introduce.html",
+            "link": "Introduce.page.html",
             "status": "introduce",
             "omegamenu": false,
             "childrens": null
@@ -19,9 +19,9 @@
         {
             "_id": 3,
             "name": "Sản phẩm",
-            "link": "detail__braces.html",
+            "link": "Product.page.html",
             "omegamenu": false,
-            "status": "braces",
+            "status": "products",
             "childrens": null
         },
         {

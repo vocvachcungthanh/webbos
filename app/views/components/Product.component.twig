@@ -1,0 +1,31 @@
+{% for item in products %}
+
+	<div class="product bgc__white--100 {{item.class}}">
+		<a href="DetailProduct.page.html" class="product__image frame" title="{{item.name}}">
+			<img src="images/{{item.img}}" alt="{{item.img}}">
+		</a>
+		<div class="product__body text__center">
+			<h3 class="product__body--title">
+				<a href="DetailProduct.page.html" class="product__body--link" title="{{item.name}}">
+					{{item.name}}
+				</a>
+
+			</h3>
+			<div class="product__body--desc text__gray--700">
+				Quản lý phòng ban, chức danh và vị trí làm việc của nhân sự
+			</div>
+		</div>
+		<div class="product__footer d__flex">
+			<span class="product__footer--icon">
+				<img src="images/icons/icon__tools.svg" alt="icon__tools.svg">
+			</span>
+			<a href="DetailProduct.page.html" class="product__footer--view text__gray--400" title="Xem thêm">
+				Xem thêm
+			</a>
+			<span class="product__footer--next">
+				<img src="images/icons/icon__next.svg" alt="icon__next.svg">
+			</span>
+		</div>
+	</div>
+
+{% endfor %}

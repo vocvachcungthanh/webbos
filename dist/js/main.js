@@ -4,7 +4,6 @@ function trustSlider() {
         slidesToScroll: 3,
         rows: 4,
         dots: true,
-        slidesToScroll: 5,
         arrows: false,
         autoplay: true,
     });

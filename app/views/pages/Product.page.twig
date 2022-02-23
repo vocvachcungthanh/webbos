@@ -1,0 +1,132 @@
+{% extends "../layouts/master-layout.twig" %}
+{% set page = 'products' %}
+
+{% block titlePage %}
+	Sản phẩm
+{% endblock %}
+{% block stylePage %}
+	<link rel="stylesheet" href="./css/pages/Product.page.css"/>
+{% endblock %}
+{% block content %}
+	<section class="page-product">
+		<div class="page-product__banner">
+			<div class="container">
+				<div class="page-product__group d__flex">
+					<div class="page-product__banner--content">
+						<h1 class="title__global text__blue--200">
+							Bộ sản phẩm BOS
+						</h1>
+						<h2 class="page-product__info text__gray--600">
+							đồng hành cùng doanh nghiệp trên con đường chuyển đổi số
+						</h2>
+						<div class="page-product__desc text__gray--600">
+							Hơn 300.000 người dùng đến từ
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													hơn  3.500 doanh nghiệp Việt lựa chọn và tin dùng
+						</div>
+						<a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+					</div>
+					<div class="page-product__image frame">
+						<img src="images/banner__product.svg" alt="banner__product.svg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="finance bgc__gray--300">
+		<div class="container">
+			<h1 class="title__global text__blue--200 text__center">
+				BOS - Tài chính
+			</h1>
+			<p class="global__info text__center text__gray--700">
+				Bộ công cụ quản lý tài chính cho doanh nghiệp
+			</p>
+			<div class="finance__group d__flex">
+
+				{% include "../components/Product.component.twig" with
+                { "products":
+                    [
+                        {"name":"BOS - Tài chính", "img":"finance__1.svg","class":"product--blue"},
+                        {"name":"BOS - Tài chính", "img":"finance__2.svg","class":"product--blue"},
+                        {"name":"BOS - Tài chính", "img":"finance__3.svg","class":"product--blue"},
+                        {"name":"BOS - Tài chính", "img":"finance__1.svg","class":"product--blue"},
+                        {"name":"BOS - Tài chính", "img":"finance__1.svg","class":"product--blue"},
+                        {"name":"BOS - Tài chính", "img":"finance__2.svg","class":"product--blue"},
+                        {"name":"BOS - Tài chính", "img":"finance__3.svg","class":"product--blue"},
+
+                    ]
+                } %}
+				<div class="d__flex justify__content">
+					{% include "../components/View.component.twig" %}
+				</div>
+			</div>
+			<div class="text__center m__t--32">
+				<a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+			</div>
+		</div>
+	</section>
+	<section class="finance bg__business">
+		<div class="container ">
+			<h1 class="title__global text__green--200 text__center">
+				BOS - Kinh doanh
+			</h1>
+			<p class="global__info text__center">
+				Bộ công cụ quản lý Kinh doanh cho doanh nghiệp
+			</p>
+			<div class="finance__group d__flex">
+
+				{% include "../components/Product.component.twig" with
+                { "products":
+                    [
+                        {"name":"BOS - Kinh doanh", "img":"business__1.svg","class":"product--green"},
+                        {"name":"BOS - Kinh doanh", "img":"business__2.svg","class":"product--green"},
+                        {"name":"BOS - Kinh doanh", "img":"business__3.svg","class":"product--green"},
+                        {"name":"BOS - Kinh doanh", "img":"business__1.svg","class":"product--green"},
+                        {"name":"BOS - Kinh doanh", "img":"business__1.svg","class":"product--green"},
+                        {"name":"BOS - Kinh doanh", "img":"business__2.svg","class":"product--green"},
+                        {"name":"BOS - Kinh doanh", "img":"business__3.svg","class":"product--green"},
+
+                    ]
+                } %}
+				<div class="d__flex justify__content">
+					{% include "../components/View.component.twig" %}
+				</div>
+			</div>
+			<div class="text__center m__t--32">
+				<a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+			</div>
+		</div>
+	</section>
+	<section class="finance bgc__gray--300">
+		<div class="container">
+			<h1 class="title__global text__blue--200 text__center">
+				BOS - Nhân sự
+			</h1>
+			<p class="global__info text__center text__gray--700">
+				Bộ công cụ quản lý tài chính cho doanh nghiệp
+			</p>
+			<div class="finance__group d__flex">
+
+				{% include "../components/Product.component.twig" with
+                { "products":
+                    [
+                        {"name":"BOS - Nhân sự", "img":"finance__1.svg","class":"product--blue"},
+                        {"name":"BOS - Nhân sự", "img":"finance__2.svg","class":"product--blue"},
+                        {"name":"BOS - Nhân sự", "img":"finance__3.svg","class":"product--blue"},
+                        {"name":"BOS - Nhân sự", "img":"finance__1.svg","class":"product--blue"},
+                        {"name":"BOS - Nhân sự", "img":"finance__1.svg","class":"product--blue"},
+                        {"name":"BOS - Nhân sự", "img":"finance__2.svg","class":"product--blue"},
+                        {"name":"BOS - Nhân sự", "img":"finance__3.svg","class":"product--blue"},
+
+                    ]
+                } %}
+				<div class="d__flex justify__content">
+					{% include "../components/View.component.twig" %}
+				</div>
+			</div>
+			<div class="text__center m__t--32">
+				<a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+{% block scriptPage %}{% endblock %}

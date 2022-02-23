@@ -48,7 +48,7 @@
 					<ul class="footer__list">
 						{% for item in menus %}
 							{% if loop.index > 1 %}
-								<li class="footer__item {{ item.status == pages ? 'active' : '' }}">
+								<li class="footer__item {{ item.status == page ? 'active' : '' }}">
 									<a href={{item.link}} class="footer__item--link" title={{item.name}}>
 										{{item.name}}
 									</a>
