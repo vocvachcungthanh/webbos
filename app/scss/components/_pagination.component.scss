@@ -1,0 +1,39 @@
+.pagination {
+    margin-top: 3.2rem;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+    li {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.4rem;
+            height: 2.4rem;
+            overflow: hidden;
+            border-radius: 0.4rem;
+        }
+        &.active {
+            a {
+                background-color: map-get($colors, "blue-300");
+                color: map-get($colors, "white-100");
+            }
+        }
+    }
+    &__prev {
+        a {
+            img {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+    &__no {
+        a {
+            opacity: 0.6;
+            cursor: no-drop;
+        }
+    }
+}

@@ -1,0 +1,246 @@
+/**
+*@helpers
+*/
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+.price-list {
+    &__banner {
+        padding-top: 9.1rem;
+        padding-bottom: 7.105rem;
+        .title__global {
+            font-size: 5.915rem;
+            line-height: 6.932rem;
+        }
+    }
+    &__span {
+        font-size: 2.9rem;
+        line-height: 3.398rem;
+    }
+    &__image {
+        max-width: 46.954rem;
+        width: 100%;
+        flex-shrink: 0;
+        padding-top: 40.948%;
+    }
+    &__desc {
+        margin-top: 1.623rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.109rem;
+        margin-bottom: 3.2rem;
+    }
+    &__group {
+        align-items: center;
+    }
+    &__container {
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3.7rem;
+        max-width: 96.8rem;
+        width: 100%;
+        margin: auto;
+    }
+    &__item {
+        box-shadow: 0px 4px 15px map-get($colors, "gray-800");
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 2.4rem 2.4rem 4.8rem 2.4rem;
+        transition: 0.3s all;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 55.94px;
+            background: url("../../images/icons/price__list.svg") no-repeat;
+            background-position: bottom right;
+            background-size: contain;
+            transition: 0.3s all;
+        }
+        &:hover {
+            transform: translateY(-2rem);
+            transition: 0.3s all;
+            background-color: map-get($colors, "gray--100");
+            &::before {
+                background: url("../../images/icons/price__list2.svg") no-repeat;
+                background-position: bottom right;
+                background-size: contain;
+                transition: 0.3s all;
+            }
+        }
+        &:nth-child(2) {
+            &:hover {
+                box-shadow: 0px 4px 15px map-get($colors, "blue-1001");
+                .price__btn {
+                    background: map-get($colors, "blue-200");
+                }
+            }
+            .price-list__footer {
+                .price__btn {
+                    border: 2px solid map-get($colors, "blue-200");
+                }
+            }
+        }
+        &:first-child {
+            &:hover {
+                box-shadow: 0px 4px 15px map-get($colors, "green-300");
+                .price__btn {
+                    background: map-get($colors, "green-200");
+                }
+            }
+            .price-list__footer {
+                .price__btn {
+                    border: 2px solid map-get($colors, "green-200");
+                }
+            }
+        }
+        &:last-child {
+            &:hover {
+                box-shadow: 0px 4px 15px map-get($colors, "orange-100");
+                .price__btn {
+                    background: map-get($colors, "orange-900");
+                }
+            }
+            .price-list__footer {
+                .price__btn {
+                    border: 2px solid map-get($colors, "orange-900");
+                }
+            }
+        }
+    }
+    &__footer {
+        margin-top: 1.8rem;
+        .price__btn {
+            width: 11.6rem;
+        }
+    }
+    &__price {
+        font-size: 3.2rem;
+        line-height: 5.6rem;
+        font-weight: 900;
+        margin: 0.4rem 0;
+    }
+    &__date {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    &__info {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    &__title {
+        @include cutOne();
+        text-transform: uppercase;
+        margin-top: 1.8rem;
+    }
+    &__ul {
+        padding: 0;
+        margin: 0;
+        li {
+            margin-top: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        overflow: hidden;
+        border-radius: 100%;
+        flex-shrink: 0;
+        margin-right: 0.4rem;
+        img {
+            object-fit: contain;
+            object-position: center center;
+        }
+    }
+    &__text {
+        @include cutOne();
+    }
+}
+
+.question {
+    padding-top: 8rem;
+    padding-bottom: 7.2rem;
+    &__group {
+        padding-top: 4rem;
+        column-gap: 2.386rem;
+        align-items: center;
+    }
+    &__image {
+        flex-shrink: 0;
+        max-width: 47.08rem;
+        padding-top: 42.7571%;
+        object-fit: contain;
+    }
+    &__item {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__header {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        cursor: pointer;
+        &.active {
+            .question__arrow {
+                &::before {
+                    border-top: 10px solid map-get($colors, "green-200");
+                }
+            }
+        }
+    }
+    &__old {
+        width: 2.4rem;
+        flex-shrink: 0;
+    }
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 400;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        margin-bottom: 0;
+    }
+    &__arrow {
+        width: 2.4rem;
+        position: relative;
+        &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 10px solid map-get($colors, "gray-500");
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__body {
+        background: #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 2.4rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        display: none;
+    }
+    &__desc {
+        padding-left: 1.6rem;
+        border-left: 2px solid map-get($colors, "green-200");
+        text-align: justify;
+    }
+}

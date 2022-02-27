@@ -36,7 +36,9 @@
             align-items: center;
             column-gap: 12.642rem;
             position: relative;
-
+            &.product__group--detail {
+                column-gap: 1.2rem !important;
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -54,13 +56,19 @@
             font-weight: 700;
             font-size: 2.973rem;
             line-height: 3.571rem;
-            margin-bottom: 0;
             margin-bottom: 6.4rem;
+            &.info__detail {
+                margin-bottom: 1.6rem;
+            }
         }
         &__desc {
             font-size: 1.8rem;
             line-height: 2.109rem;
             margin-bottom: 3.2rem;
+            &.page--product__desc--detail {
+                margin-top: 1.6rem;
+                margin-bottom: 2.4rem;
+            }
         }
         &__image {
             max-width: 56.759rem;

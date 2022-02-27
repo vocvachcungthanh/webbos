@@ -1,0 +1,76 @@
+.modal__recruit {
+    .content-modal {
+        max-width: 527px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        padding: 2.4rem;
+        .header-modal {
+            .modal__title {
+                font-weight: 700;
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+                margin-bottom: 2.4rem;
+            }
+        }
+        .body-modal {
+            .recruit__label {
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                margin-bottom: 0.4rem;
+                sup {
+                    color: red;
+                }
+            }
+            .recruit__input,
+            .form__vc {
+                border: 1.5px solid map-get($colors, "gray-400");
+                box-sizing: border-box;
+                border-radius: 4px;
+                overflow: hidden;
+                height: 4rem;
+                padding: 0 1.2rem;
+                display: flex;
+                align-items: center;
+            }
+            .form__group {
+                margin-bottom: 2.4rem;
+                &::placeholder {
+                    font-size: 1.3rem;
+                    color: map-get($colors, "gray-400");
+                }
+            }
+            #file__cv {
+                display: none;
+            }
+            .cv__option {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 9.2rem;
+                width: 100%;
+                height: 2.8rem;
+                overflow: hidden;
+                border-radius: 0.5rem;
+                font-weight: 500;
+            }
+            .cv__name {
+                font-size: 1.3rem;
+                display: flex;
+                margin-left: 1.2rem;
+            }
+            .text__ht {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                margin-bottom: 0;
+                margin-top: 0.4rem;
+            }
+            button {
+                width: 100%;
+                border-radius: 0.4rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,307 @@
+{% extends "../layouts/master-layout.twig" %}
+{% set page = 'recruit' %}
+{% block titlePage %}
+	Tuyển dụng
+{% endblock %}
+{% block stylePage %}
+	<link rel="stylesheet" href="./css/pages/Recruit.page.css"/>
+{% endblock %}
+{% block content %}
+	<section class="recruit">
+		"violet-500": #533ea9,
+		{% include "../components/BannerGlobal.component.twig" with {title:"BOS - WE ARE ONE", bg:"images/bg__recruit.svg", class:"text__violet--500"} %}
+		{% include "../components/GlobalMenu.component.twig"  with {
+            globalMenus:[
+                {
+                    "name":"Tester",
+                    "link":"#"
+                },
+                 {
+                    "name":"Nhân viên kinh doanh",
+                    "link":"#"
+                },
+                 {
+                    "name":"Hành chính - nhân sự",
+                    "link":"#"
+                },
+                 {
+                    "name":"Chuyên viên thiết kế",
+                    "link":"#"
+                },
+                 {
+                    "name":"Deverloper",
+                    "link":"#"
+                },
+                 {
+                    "name":"Kế toán",
+                    "link":"#"
+                }
+            ]
+        } %}
+
+		<div class="recruit__body">
+			<div class="container">
+				<div class="recruit__body--group d__flex">
+					<div class="recruit__body--content">
+						<div class="question__group text__black--900">
+
+							<div class="question__box">
+								<div class="question__container">
+									{% for item in 1..6 %}
+										<div class="question__item bgc__gray--100 ">
+											<div class="question__header {{loop.index == 1 ? 'active' : ''}}">
+												<span class="question__header--arrow"></span>
+												<h3 class="question__title text__blue--200">
+													Technical Architect (Java or Nodejs) 20-30M
+												</h3>
+												<ul class="question__list text__black--900">
+													<li class="d__flex">
+														<span class="icon">
+															<img src="images/icons/icon__map.svg" alt="icon__map.svg">
+														</span>
+														<span class="name">
+															Tòa 34T Hoàng Đạo Thúy, Cầu Giấy, Hà Nội
+														</span>
+														<a class"text__blue--400" href="https://goo.gl/maps/AoHGLeyixvcZRkwT9" target="_blank">
+															Xem bản đồ
+														</a>
+													</li>
+													<li class="d__flex">
+														<span class="icon">
+															<img src="images/icons/icon__date.svg" alt="icon__date.svg">
+														</span>
+														<span class="name">
+															1 tháng trước
+														</span>
+
+													</li>
+													<li class="d__flex">
+														<span class="icon">
+															<img src="images/icons/icon__user.svg" alt="icon__user.svg">
+														</span>
+														<span class="name">
+															2 nhân sự
+														</span>
+
+													</li>
+												</ul>
+											</div>
+											<div class="question__body" style="{{loop.index == 1 ? 'display:block' : ''}}">
+												<div class="question__desc">
+													<h3 class="text__black--900">
+														Lý do gia nhập công ty
+													</h3>
+													<p>
+														Với sự thấu hiểu những khó khăn trong việc quản trị doanh nghiệp, các Founder của BOS bằng những kinh nghiệm thực chiến của mình kết hợp với các phương thức quản trị tiên tiến nhất cho ra đời bộ giải pháp quản trị doanh nghiệp gồm có:
+
+													</p>
+													<ul>
+														<li>
+															Hệ thống các phần mềm quản trị doanh nghiệp giúp triển khai toàn bộ các hoạt động của doanh nghiệp trên nền tảng số hóa gọi là phần mềm “Hệ điều hành doanh nghiệp BOS” giúp số hóa các hoạt động quản trị một cách đồng bộ theo thời gian thực.
+
+														</li>
+														<li>
+															Hệ thống đào tạo nhân sự quản trị cấp trung và cấp cao
+														</li>
+													</ul>
+												</div>
+												<div class="question__desc">
+													<h3 class="text__black--900">
+														Mô tả công việc
+													</h3>
+													<p>
+														Với sự thấu hiểu những khó khăn trong việc quản trị doanh nghiệp, các Founder của BOS bằng những kinh nghiệm thực chiến của mình kết hợp với các phương thức quản trị tiên tiến nhất cho ra đời bộ giải pháp quản trị doanh nghiệp gồm có:
+
+													</p>
+													<ul>
+														<li>
+															Tiếp nhận, khảo sát, thu thập yêu cầu từ các bên liên quan để đưa ra các yêu cầu về nghiệp vụ, giao diện và tính năng; đánh giá độ phù hợp của các yêu cầu với tổng thể hệ thống hiện tại
+
+														</li>
+														<li>
+															Phân tích sản phẩm/ứng dụng của đối thủ cạnh tranh về mặt quy trình, nghiệp vụ, trải nghiệm khách hàng (competitor analytics).
+
+														</li>
+														<li>
+															Hợp tác chặt chẽ với nhóm lập trình để thực hiện các yêu cầu, cung cấp hướng dẫn cần thiết cho kiểm thử.
+
+														</li>
+														<li>
+															Tham gia kiểm thử chất lượng phần mềm, nghiệm thu sản phẩm trước khi thực hiện chuyển giao.
+
+														</li>
+														<li>
+															Tham gia Viết tài liệu hướng dẫn sử dụng và đào tạo những người liên quan..
+
+														</li>
+													</ul>
+												</div>
+												<div class="question__desc">
+													<h3 class="text__black--900">
+														Yêu cầu công việc
+													</h3>
+													<p>
+														Tiếp nhận, khảo sát, thu thập yêu cầu từ các bên liên quan để đưa ra các yêu cầu về nghiệp vụ, giao diện và tính năng; đánh giá độ phù hợp của các yêu cầu với tổng thể hệ thống hiện tại
+
+													</p>
+													<ul>
+														<li>
+															Tiếp nhận, khảo sát, thu thập yêu cầu từ các bên liên quan để đưa ra các yêu cầu về nghiệp vụ, giao diện và tính năng; đánh giá độ phù hợp của các yêu cầu với tổng thể hệ thống hiện tại
+
+														</li>
+														<li>
+															Phân tích sản phẩm/ứng dụng của đối thủ cạnh tranh về mặt quy trình, nghiệp vụ, trải nghiệm khách hàng (competitor analytics).
+
+														</li>
+														<li>
+															Hợp tác chặt chẽ với nhóm lập trình để thực hiện các yêu cầu, cung cấp hướng dẫn cần thiết cho kiểm thử.
+
+														</li>
+														<li>
+															Tham gia kiểm thử chất lượng phần mềm, nghiệm thu sản phẩm trước khi thực hiện chuyển giao.
+
+														</li>
+														<li>
+															Tham gia Viết tài liệu hướng dẫn sử dụng và đào tạo những người liên quan..
+
+														</li>
+													</ul>
+												</div>
+												<div class="question__desc">
+													<h3 class="text__black--900">
+														Quyền lợi được hưởng
+													</h3>
+													<p>
+														Tiếp nhận, khảo sát, thu thập yêu cầu từ các bên liên quan để đưa ra các yêu cầu về nghiệp vụ, giao diện và tính năng; đánh giá độ phù hợp của các yêu cầu với tổng thể hệ thống hiện tại
+
+													</p>
+													<ul>
+														<li>
+															Tiếp nhận, khảo sát, thu thập yêu cầu từ các bên liên quan để đưa ra các yêu cầu về nghiệp vụ, giao diện và tính năng; đánh giá độ phù hợp của các yêu cầu với tổng thể hệ thống hiện tại
+
+														</li>
+														<li>
+															Phân tích sản phẩm/ứng dụng của đối thủ cạnh tranh về mặt quy trình, nghiệp vụ, trải nghiệm khách hàng (competitor analytics).
+
+														</li>
+														<li>
+															Hợp tác chặt chẽ với nhóm lập trình để thực hiện các yêu cầu, cung cấp hướng dẫn cần thiết cho kiểm thử.
+
+														</li>
+														<li>
+															Tham gia kiểm thử chất lượng phần mềm, nghiệm thu sản phẩm trước khi thực hiện chuyển giao.
+
+														</li>
+														<li>
+															Tham gia Viết tài liệu hướng dẫn sử dụng và đào tạo những người liên quan..
+
+														</li>
+													</ul>
+												</div>
+												<div class="question__desc">
+													<h3 class="text__black--900">
+														Thông tin khác
+													</h3>
+													<p>
+														Tiếp nhận, khảo sát, thu thập yêu cầu từ các bên liên quan để đưa ra các yêu cầu về nghiệp vụ, giao diện và tính năng; đánh giá độ phù hợp của các yêu cầu với tổng thể hệ thống hiện tại
+
+													</p>
+													<ul>
+														<li>
+															Tiếp nhận, khảo sát, thu thập yêu cầu từ các bên liên quan để đưa ra các yêu cầu về nghiệp vụ, giao diện và tính năng; đánh giá độ phù hợp của các yêu cầu với tổng thể hệ thống hiện tại
+
+														</li>
+														<li>
+															Phân tích sản phẩm/ứng dụng của đối thủ cạnh tranh về mặt quy trình, nghiệp vụ, trải nghiệm khách hàng (competitor analytics).
+
+														</li>
+														<li>
+															Hợp tác chặt chẽ với nhóm lập trình để thực hiện các yêu cầu, cung cấp hướng dẫn cần thiết cho kiểm thử.
+
+														</li>
+														<li>
+															Tham gia kiểm thử chất lượng phần mềm, nghiệm thu sản phẩm trước khi thực hiện chuyển giao.
+
+														</li>
+														<li>
+															Tham gia Viết tài liệu hướng dẫn sử dụng và đào tạo những người liên quan..
+
+														</li>
+													</ul>
+												</div>
+
+												<button type="button" modal-show="show" modal-data="#myModal" class="btn bgc__green--200 text__blue--900">
+													Ứng tuyển
+												</button>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+					{% include "../components/Post.component.twig" with {
+                                title: "Tuyển dụng khác",
+                                name:"Senior Cyber DevOps Engineer (Hanoi)",
+                                link:"#"
+                            } %}
+				</div>
+				<div class="recruit__pagination">
+					{% include "../components/Pagination.component.twig" %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="bs-modal modal__recruit" id="myModal">
+		<div class="modal-frame">
+			<div class="content-modal">
+				<div class="modal__container">
+					<div class="header-modal">
+						<h3 class="modal__title text__gray--700 text__center">
+							Technical Architect (Java/Nodejs) 20-30M
+						</h3>
+					</div>
+					<div class="body-modal">
+						<form class="recruit__form">
+							<div class="form__group">
+								<label for="name" class="recruit__label text__black--900">
+									Họ và tên của bạn
+									<sup>*</sup>
+								</label>
+								<input id="name" type="text" class="recruit__input" placeholder="Nhập họ và tên của bạn">
+							</div>
+							<div class="form__group">
+								<label for="email" class="recruit__label text__black--900">
+									Email
+									<sup>*</sup>
+								</label>
+								<input id="email" type="email" class="recruit__input" placeholder="Nhập email của bạn">
+							</div>
+							<div class="form__group">
+								<label class="recruit__label text__black--900">
+									CV
+									<sup>*</sup>
+								</label>
+								<label for="file__cv" class="form__vc d__flex">
+									<input type="file" id="file__cv">
+									<span class="cv__option text__blue--300 bgc__blue--1003">
+										Chọn tệp
+									</span>
+									<span class="cv__name text__gray--700">
+										Không có tệp nào được chọn
+									</span>
+								</label>
+								<p class="text__gray--700 text__ht">
+									Hỗ trợ định dạng .doc .docx .pdf dưới 1MB
+								</p>
+							</div>
+							<button class="btn bgc__blue--300 text__white--100 text__center">
+								Gửi CV
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

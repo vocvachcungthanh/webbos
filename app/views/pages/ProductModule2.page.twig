@@ -1,0 +1,110 @@
+{% extends "../layouts/master-layout.twig" %}
+{% set page = 'products' %}
+
+{% block titlePage %}
+	Sản phẩm - modul cấp 2
+{% endblock %}
+{% block stylePage %}
+	<link rel="stylesheet" href="./css/pages/Product.page.css"/>
+{% endblock %}
+{% block content %}
+	<section class="page-product">
+		<div class="page-product__banner banner__module bgc__gray--100">
+			<div class="container">
+				<div class="page-product__group product__group--detail d__flex">
+					<div class="page-product__banner--content">
+						<h2 class="title__global text__gray--600">
+							BOS - Nhân sự - Giải pháp quản trị và phát triển nhân sự
+						</h2>
+						<div class="page-product__desc page--product__desc--detail text__gray--600">
+							Ứng dụng quản lý toàn diện nhân sự cho doanh nghiệp
+						</div>
+						<a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+					</div>
+					<div class="page-product__image frame">
+						<img src="images/product__detail.svg" alt="product__detail.svg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="product__detail">
+		<div class="container">
+			<div class="product__detail__group">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta fugiat error incidunt assumenda sint dignissimos quam iusto rerum nostrum, corrupti aliquid quas? Doloribus ullam similique nostrum totam iste veniam assumenda!
+																																																																																												                Amet quaerat, corrupti quo ducimus excepturi eveniet distinctio tempore consequatur vitae soluta sit quasi modi debitis libero atque eum dolorem deleniti illo est nobis esse unde quas perspiciatis mollitia? Doloremque.
+																																																																																												                Dicta eaque nam tempora praesentium? At corporis iste quam voluptatum asperiores accusantium, consectetur obcaecati, facere architecto inventore soluta voluptatibus similique voluptate quibusdam quidem magni minus nobis cupiditate esse numquam illo!
+																																																																																												                Expedita blanditiis at magni ipsam tempore ipsa a odit fugiat nisi vel dolore veniam rerum temporibus, impedit dignissimos excepturi rem corrupti delectus dolores deserunt. Eius rerum veniam culpa natus dolorum!
+																																																																																												                Fuga amet laudantium modi impedit quae sit tempora delectus incidunt expedita excepturi beatae eligendi vitae saepe praesentium, voluptatibus quos! Id magni nihil eaque dolores vero ad veritatis libero laborum nostrum!
+																																																																																												                Consequatur nihil, unde ducimus tempore exercitationem quia iure a enim amet omnis vero quasi explicabo soluta hic, sint accusamus expedita delectus eaque! Commodi, consectetur nemo! Minima iusto expedita temporibus sit?
+																																																																																												                Sit blanditiis aperiam officiis quam quasi ad ullam libero illum sunt eius nesciunt, esse quibusdam perferendis ut recusandae nemo, qui iusto, maiores veniam eveniet dignissimos accusantium nihil quaerat voluptate. Nihil!
+																																																																																												                In quasi qui, id ratione veniam possimus, vel doloribus, illum quia voluptates ipsam mollitia assumenda? Enim nisi dignissimos, neque nobis ab quidem possimus. Quidem deleniti et autem iste, porro suscipit.
+																																																																																												                Ullam, doloremque ad sapiente voluptate perferendis itaque quas at eius rem et facilis error ipsa inventore animi blanditiis fuga nulla quae cumque tempora? Repudiandae, mollitia. Unde illo qui voluptates ipsum.
+																																																																																												                Voluptas doloribus, odio cumque enim debitis optio sit voluptatibus accusamus cum quia neque, beatae rem repellendus iusto tenetur temporibus vero dolorem et dignissimos quae distinctio. Aliquam fugit dicta voluptas laborum.
+			</div>
+		</div>
+	</section>
+	{% include "../components/GlobalHeader.component.twig" with {title:"Dùng thử miễn phí 30 ngày", info:"Tổng đài tư vấn miễn phí: 1900 1066", btn:"Đăng ký dùng thử"} %}
+	<section class="p__t--64">
+		{% include "../components/TrustBusiness.compoent.twig" %}
+	</section>
+
+	{% include "../components/GlobalHeader.component.twig" with {title:"Có thể bạn quan tâm", info:"Các công cụ khác giúp bạn điều hành doanh nghiệp tốt hơn"} %}
+	<section class="finance bgc__gray--300">
+		<div class="container">
+			<h1 class="title__global text__blue--200 text__center">
+				BOS - Tài chính
+			</h1>
+			<p class="global__info text__center text__gray--700">
+				Bộ công cụ quản lý tài chính cho doanh nghiệp
+			</p>
+			<div class="finance__group d__flex">
+
+				{% include "../components/Product.component.twig" with
+                { "products":
+                    [
+                        {"name":"BOS - Tài chính", "img":"finance__1.svg","class":"product--blue"},
+                        {"name":"BOS - Tài chính", "img":"finance__2.svg","class":"product--blue"},
+                        {"name":"BOS - Tài chính", "img":"finance__3.svg","class":"product--blue"},
+
+                    ]
+                } %}
+				<div class="d__flex justify__content">
+					{% include "../components/View.component.twig" %}
+				</div>
+			</div>
+			<div class="text__center m__t--32">
+				<a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+			</div>
+		</div>
+	</section>
+	<section class="finance bg__business">
+		<div class="container ">
+			<h2 class="title__global text__green--200 text__center">
+				BOS - Kinh doanh
+			</h2>
+			<p class="global__info text__center">
+				Bộ công cụ quản lý Kinh doanh cho doanh nghiệp
+			</p>
+			<div class="finance__group d__flex">
+
+				{% include "../components/Product.component.twig" with
+                { "products":
+                    [
+                        {"name":"BOS - Kinh doanh", "img":"business__1.svg","class":"product--green"},
+                        {"name":"BOS - Kinh doanh", "img":"business__2.svg","class":"product--green"},
+                        {"name":"BOS - Kinh doanh", "img":"business__3.svg","class":"product--green"},
+
+                    ]
+                } %}
+				<div class="d__flex justify__content">
+					{% include "../components/View.component.twig" %}
+				</div>
+			</div>
+			<div class="text__center m__t--32">
+				<a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+{% block scriptPage %}{% endblock %}

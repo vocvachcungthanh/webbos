@@ -1,0 +1,35 @@
+.global {
+    &__banner {
+        padding-top: 12.4rem;
+        padding-bottom: 5.6rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__form {
+        max-width: 27.4rem;
+        margin: 2.4rem auto 0 auto;
+        overflow: hidden;
+        border: 1px solid map-get($colors, "gray-600");
+        border-radius: 0.4rem;
+        padding: 0 0.4rem;
+        justify-content: center;
+    }
+    &__input {
+        border: 0;
+
+        &::placeholder {
+            font-size: 1.4rem;
+            color: map-get($colors, "gray-500");
+            font-family: $font-family;
+        }
+    }
+    &__search {
+        box-shadow: unset;
+        width: 2.4rem;
+        flex-shrink: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+}

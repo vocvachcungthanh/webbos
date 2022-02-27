@@ -1,0 +1,148 @@
+{% extends "../layouts/master-layout.twig" %}
+{% set page = 'news' %}
+{% block titlePage %}
+	Tin tức
+{% endblock %}
+{% block stylePage %}
+	<link rel="stylesheet" href="./css/pages/News.page.css"/>
+{% endblock %}
+{% block content %}
+	<section class="news">
+		{% include "../components/BannerGlobal.component.twig" with {title:"Quản trị doanh nghiệp", bg:"images/bg__news.svg", class:"text__blue--200"} %}
+		{% include "../components/GlobalMenu.component.twig"  with {
+            globalMenus:[
+                {
+                    "name":"Quản trị doanh nghiệp",
+                    "link":"#"
+                },
+                 {
+                    "name":"Quản trị Nhân sự",
+                    "link":"#"
+                },
+                 {
+                    "name":"Marketing - Bán hàng",
+                    "link":"#"
+                },
+                 {
+                    "name":"Quản trị dự án & công việc",
+                    "link":"#"
+                },
+                 {
+                    "name":"Kiến thức hữu ích",
+                    "link":"#"
+                },
+                 {
+                    "name":"Tính năng mới",
+                    "link":"#"
+                }
+            ]
+        } %}
+		<div class="news__header">
+			<div class="container">
+				<div class="news__header--gulp d__flex">
+					<a href="DetailNews.page.html" class="news__one text__white--100">
+						<div class="image">
+							<img src="images/news__one.svg" alt="news__one.svg">
+						</div>
+						<div class="news__one--content">
+							<h1 class="news__header--title">
+								Jealous House: Khi những người trẻ không đứng ngoài
+								<br>
+								cuộc đua chuyển đổi số
+							</h1>
+							<time class="news__header--time d__flex">
+								<span class="news__header--icon">
+									<img src="images/icons/icon__time.svg" alt="icon__time.svg">
+								</span>
+								12/12/2022
+							</time>
+						</div>
+					</a>
+					{% include "../components/Post.component.twig" with {
+                         title: "Bài viết mới nhất",
+                         name:"Jealous House: Khi những người trẻ không đứng ngoài cuộc đua chuyển đổi số",
+                         link:"DetailNews.page.html"
+                    } %}
+				</div>
+			</div>
+		</div>
+		<div class="news__hot">
+			<div class="container">
+				<div class="news__hot--header">
+					<h2 class="title__global news__hot--title text__blue--200">
+						Bài viết nổi bật
+					</h2>
+				</div>
+				<div class="news__hot--slide">
+					<div class="news__hot--slick">
+						{% for item in 1..2 %}
+							<div class="news__hot--item">
+								<div class="news__hot--box">
+									<a href="DetailNews.page.html" class="news__hot--image frame" title="Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS">
+										<img src="images/news__hot--{{loop.index}}.svg" alt="news__hot--{{loop.index}}.svg">
+									</a>
+									<h3 class="news__hot--name">
+										<a class="text__gray--700" href="DetailNews.page.html" title="Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS">
+											Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS
+										</a>
+									</h3>
+									<div class="news__hot--desc text__gray--500">
+										Tất cả những công việc lớn lao đều phải bắt đầu bằng từng bước nhỏ, việc chuẩn hóa dữ liệu cũng vậy, muốn công ty hoạt động hiệu quả bao nhiêu thì phần mềm quản trị cũng cần chuẩn bấy nhiêu.
+									</div>
+									<time class="news__hot--time d__flex text__gray--400">
+										<span class="news__hot--icon">
+											<img src="images/icons/icon__time.svg" alt="icon__time.svg">
+										</span>
+										<span>
+											12/12/2022
+										</span>
+									</time>
+								</div>
+							</div>
+							<div class="news__hot--item">
+								<div class="news__hot--box">
+									<a href="DetailNews.page.html" class="news__hot--image frame" title="Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS">
+										<img src="images/news__hot--{{loop.index}}.svg" alt="news__hot--{{loop.index}}.svg">
+									</a>
+									<h3 class="news__hot--name">
+										<a class="text__gray--700" href="DetailNews.page.html" title="Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS">
+											Công ty Công nghệ chiếu sáng ILIKE và bước tiến thần tốc cùng BOS
+										</a>
+									</h3>
+									<div class="news__hot--desc text__gray--500">
+										Tất cả những công việc lớn lao đều phải bắt đầu bằng từng bước nhỏ, việc chuẩn hóa dữ liệu cũng vậy, muốn công ty hoạt động hiệu quả bao nhiêu thì phần mềm quản trị cũng cần chuẩn bấy nhiêu.
+									</div>
+									<time class="news__hot--time d__flex text__gray--400">
+										<span class="news__hot--icon">
+											<img src="images/icons/icon__time.svg" alt="icon__time.svg">
+										</span>
+										<span>
+											12/12/2022
+										</span>
+									</time>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		{% include "../components/NewsOther.component.twig" %}
+	</section>
+{% endblock %}
+{% block scriptPage %}
+	<script>
+
+
+		function newsHot() {
+$('.news__hot--slick').slick({
+slidesToShow: 2,
+slidesToScroll: 1,
+dost: false,
+arrows: true,
+infinite: false
+})
+}
+newsHot()
+	</script>
+{% endblock %}

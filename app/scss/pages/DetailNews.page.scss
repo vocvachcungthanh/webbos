@@ -1,0 +1,71 @@
+/**
+*@helpers
+*/
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+.news {
+    &__detail {
+        padding-top: 6rem;
+    }
+    &__header {
+        padding-top: 2.4rem;
+        &--gulp {
+            column-gap: 2.4rem;
+            align-items: flex-start;
+        }
+    }
+}
+.detail {
+    max-width: 76.9rem;
+    width: 100;
+    flex-shrink: 0;
+    &__title {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        margin-bottom: 1.6rem;
+    }
+    img {
+        max-width: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.2rem;
+    }
+    &__time {
+        font-style: italic;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.2rem;
+        &--icon {
+            display: flex;
+            align-items: center;
+            margin-right: 0.4rem;
+            img {
+                filter: brightness(0.5);
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__desc {
+        font-size: 1.4rem;
+        text-align: justify;
+        p {
+            margin-bottom: 2.7rem;
+        }
+        b {
+            font-size: 1.6rem;
+        }
+        color: map-get($colors, "black-900");
+    }
+    &__auth {
+        text-align: right;
+        font-style: italic;
+        font-size: 1.6rem;
+    }
+    &__training {
+        padding-bottom: 8rem;
+    }
+}

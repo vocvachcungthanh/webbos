@@ -1,0 +1,25 @@
+<div class="news__header--item bgc__gray--100">
+	<h2 class="item__title text__blue--200">
+		{{title}}
+	</h2>
+	<div class="news__box">
+		{% for item in 1..6 %}
+			<a href="{{link}}" class="item__list d__flex text__gray--700">
+				<div class="item__image frame">
+					<img src="images/news__list-{{loop.index}}.svg" alt="{{loop.index}}.svg">
+				</div>
+				<h3 class="item__name">
+					{{name}}
+				</h3>
+			</a>
+			<a href="{{link}}" class="item__list d__flex text__gray--700">
+				<div class="item__image frame">
+					<img src="images/news__list-{{loop.index}}.svg" alt="{{loop.index}}.svg">
+				</div>
+				<h3 class="item__name">
+					{{name}}
+				</h3>
+			</a>
+		{% endfor %}
+	</div>
+</div>

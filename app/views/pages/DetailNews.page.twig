@@ -1,0 +1,102 @@
+{% extends "../layouts/master-layout.twig" %}
+{% set page = 'news' %}
+{% block titlePage %}
+	Chi tiết tín tức
+{% endblock %}
+{% block stylePage %}
+	<link rel="stylesheet" href="./css/pages/DetailNews.page.css"/>
+{% endblock %}
+{% block content %}
+	<section class="news news__detail">
+		{% include "../components/GlobalMenu.component.twig"  with {
+            globalMenus:[
+                {
+                    "name":"Quản trị doanh nghiệp",
+                    "link":"#"
+                },
+                 {
+                    "name":"Quản trị Nhân sự",
+                    "link":"#"
+                },
+                 {
+                    "name":"Marketing - Bán hàng",
+                    "link":"#"
+                },
+                 {
+                    "name":"Quản trị dự án & công việc",
+                    "link":"#"
+                },
+                 {
+                    "name":"Kiến thức hữu ích",
+                    "link":"#"
+                },
+                 {
+                    "name":"Tính năng mới",
+                    "link":"#"
+                }
+            ]
+        } %}
+		<div class="news__header">
+			<div class="container">
+				<div class="news__header--gulp d__flex">
+					<div class="detail">
+						<h1 class="detail__title">
+							Jealous House: Khi những người trẻ không đứng ngoài
+							<br>
+							cuộc đua chuyển đổi số
+						</h1>
+						<time class="detail__time d__flex text__gray--400">
+							<span class="detail__time--icon">
+								<img src="images/icons/icon__time.svg" alt="icon__time.svg">
+							</span>
+							<span>
+								12/12/2022
+							</span>
+						</time>
+						<div class="detail__desc">
+							<p>
+								<b>
+									Jealous House là ứng dụng giao hàng theo nhu cầu khá lớn trên thị trường giao hàng công nghệ tại Việt Nam. Sau 5 năm hình thành và phát triển, đến nay AhaMove đã trở thành ứng dụng quen thuộc của các chủ cửa hàng tại những thành phố lớn.
+								</b>
+							</p>
+							<p>
+								Jealous House là ứng dụng giao hàng theo nhu cầu khá lớn trên thị trường giao hàng công nghệ tại Việt Nam. Sau 5 năm hình thành và phát triển, đến nay đã trở thành ứng dụng quen thuộc của các chủ cửa hàng tại những thành phố lớn.
+							</p>
+							<p>
+								nên các chủ cửa hàng không mấy khi phải mất thời gian chờ người nhận đơn. Có lợi thế về mặt số lượng và tốc độ của shipper như vậy nên AhaMove đã ra mắt thêm nhiều dịch vụ để phù hợp với từng nhóm khách hàng riêng lẻ và rất được ủng hộ. Hiện tại từ giữa năm ngoái đến nay AhaMove cũng bắt đầu mở rộng vùng phủ ra các tỉnh thành lớn trên cả nước như Bình Dương, Đồng Nai (Biên Hoà), Bắc Ninh (Thị xã Từ Sơn và Thành phố Bắc Ninh), Thành phố Hải Phòng, Đà Nẵng, Cần Thơ và được sự sự ủng hộ lớn của người dân ở các thành phố này.
+							</p>
+							<img src="images/news__detail.svg" alt="news__detail.svg">
+							<p class="text__center">
+								<i>
+									AhaMove chuyển đổi số trong quản trị nguồn nhân lực
+								</i>
+							</p>
+
+							<p>
+								<b>
+									Jealous House là ứng dụng giao hàng theo nhu cầu khá lớn trên thị trường giao hàng công nghệ tại Việt Nam. Sau 5 năm hình thành và phát triển, đến nay AhaMove đã trở thành ứng dụng quen thuộc của các chủ cửa hàng tại những thành phố lớn.
+								</b>
+							</p>
+							<p>
+								Jealous House là ứng dụng giao hàng theo nhu cầu khá lớn trên thị trường giao hàng công nghệ tại Việt Nam. Sau 5 năm hình thành và phát triển, đến nay đã trở thành ứng dụng quen thuộc của các chủ cửa hàng tại những thành phố lớn.
+							</p>
+							<p>
+								Để đáp ứng đơn hàng đó, số lượng tài xế hiện nay AhaMove đã vượt mốc 10 vạn. Số lượng shipper đông đảo nên các chủ cửa hàng không mấy khi phải mất thời gian chờ người nhận đơn. Có lợi thế về mặt số lượng và tốc độ của shipper như vậy nên AhaMove đã ra mắt thêm nhiều dịch vụ để phù hợp với từng nhóm khách hàng riêng lẻ và rất được ủng hộ. Hiện tại từ giữa năm ngoái đến nay AhaMove cũng bắt đầu mở rộng vùng phủ ra các tỉnh thành lớn trên cả nước như Bình Dương, Đồng Nai (Biên Hoà), Bắc Ninh (Thị xã Từ Sơn và Thành phố Bắc Ninh), Thành phố Hải Phòng, Đà Nẵng, Cần Thơ và được sự sự ủng hộ lớn của người dân ở các thành phố này.
+							</p>
+							<div class="detail__auth">
+								Theo Nguyễn Văn A
+							</div>
+						</div>
+					</div>
+					{% include "../components/Post.component.twig"  with {
+                         title: "Bài viết mới nhất",
+                         name:"Jealous House: Khi những người trẻ không đứng ngoài cuộc đua chuyển đổi số",
+                         link:"DetailNews.page.html"
+                    } %}
+				</div>
+			</div>
+		</div>
+		{% include "../components/NewsOther.component.twig" %}
+	</section>
+{% endblock %}
+{% block scriptPage %}{% endblock %}

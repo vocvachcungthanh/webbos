@@ -1,0 +1,104 @@
+/**
+*@helpers
+*/
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+.recruit {
+    padding-bottom: 8rem;
+    &__body {
+        padding-top: 2.4rem;
+        &--group {
+            align-items: start;
+            column-gap: 2.4rem;
+        }
+        &--content {
+            max-width: 76.9rem;
+            width: 100%;
+            flex-shrink: 0;
+        }
+    }
+    &__pagination {
+        margin-top: 0.8rem;
+    }
+}
+.question {
+    &__body {
+        display: none;
+        margin-top: 1.2rem;
+        border-top: 1px solid map-get($colors, "gray--200");
+        padding-top: 1.2rem;
+    }
+    &__item {
+        padding: 2.4rem;
+        border-radius: 0.8rem;
+        overflow: hidden;
+        margin-bottom: 2.4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-size: 1.4rem;
+        li {
+            align-items: center;
+            line-height: 2rem;
+            margin-bottom: 0.8rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-right: 0.8rem;
+        }
+        a {
+            display: flex;
+            margin-left: 0.8rem;
+            font-style: italic;
+        }
+    }
+    &__desc {
+        margin-bottom: 1.2rem;
+        h3 {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+        p,
+        ul {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            text-align: justify;
+        }
+    }
+    &__header {
+        position: relative;
+        &.active {
+            .question__header--arrow {
+                transition: 0.3s all;
+                transform: rotate(90deg);
+            }
+        }
+        &--arrow {
+            transition: 0.3s all;
+            top: 0.8rem;
+            position: absolute;
+            @include arrow($arrow: "left", $size: 4px, $color: #757575);
+            border-left: 8px solid map-get($colors, "gray-500");
+            right: 0;
+        }
+    }
+}

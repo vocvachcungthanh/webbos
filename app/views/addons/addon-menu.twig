@@ -2,7 +2,7 @@
 	<div class="box__menu">
 		<ul class="menu">
 			{% for item in menus %}
-				<li class="menu__list {{ item.status == page ? 'active' : '' }} ">
+				<li class="menu__list {{ item.status == page ? 'active' : '' }} {{item.omega ? 'menu--static' : ''}} ">
 					<a href="{{ item.link }}" class="menu__link" title="{{ item.name }}">{{ item.name }}</a>
 					{% if item.childrens %}
 						<ul class="{{item.omegamenu ? 'meagmenu'}}">
@@ -15,6 +15,26 @@
 							{% endfor %}
 						</ul>
 					{% endif %}
+                    {% if item.omega %}
+                        <div class="omega__menu">
+                            <div class="omega__menu--container">
+                               {% for value in item.omega %}
+                                    <div class="omega__menu--item">
+                                        <div class="omega__menu--box">
+                                            <h3 class="omega__menu--title">
+                                                <a class="omega__menu--link text__violet--600" href={{value.link}} title={{value.name}} >
+                                                {{value.name}}
+                                                </a>
+                                            </h3>
+                                            <p class="omega__menu--desc text__black--900">
+                                                {{value.desc}}
+                                            </p>
+                                        </div>
+                                    </div>
+                               {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
 				</li>
 			{% endfor %}
 		</ul>

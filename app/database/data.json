@@ -22,13 +22,59 @@
             "link": "Product.page.html",
             "omegamenu": false,
             "status": "products",
-            "childrens": null
+            "childrens": null,
+            "omega": [
+                {
+                    "name": "BOS-HRM",
+                    "link": "ProductModule.page.html",
+                    "desc": "Phân hệ cung cấp bộ công cụ cho nhân viên có thể làm việc và giao tiếp nội bộ."
+                },
+                {
+                    "name": "BOS - Tài chính",
+                    "link": "ProductModule.page.html",
+
+                    "desc": "Phân hệ cung cấp bộ công cụ cho nhân viên có thể làm việc và giao tiếp nội bộ."
+                },
+                {
+                    "name": "BOS - Work",
+                    "link": "ProductModule.page.html",
+
+                    "desc": "Bộ giải pháp quản trị công việc, quy trình và dự án toàn diện."
+                },
+                {
+                    "name": "BOS - Kinh doanh",
+                    "link": "ProductModule.page.html",
+
+                    "desc": "Bộ giải pháp quản trị công việc, quy trình và dự án toàn diện."
+                },
+                {
+                    "name": "BOS-HRM",
+                    "link": "ProductModule.page.html",
+
+                    "desc": "Phân hệ cung cấp bộ công cụ cho nhân viên có thể làm việc và giao tiếp nội bộ."
+                },
+                {
+                    "name": "BOS - CRM",
+                    "link": "ProductModule.page.html",
+
+                    "desc": "Phân hệ cung cấp bộ công cụ cho nhân viên có thể làm việc và giao tiếp nội bộ."
+                },
+                {
+                    "name": "BOS-HRM",
+                    "desc": "Phân hệ cung cấp bộ công cụ cho nhân viên có thể làm việc và giao tiếp nội bộ."
+                },
+                {
+                    "name": "BOS-HRM",
+                    "link": "ProductModule.page.html",
+                    "desc": "Phân hệ cung cấp bộ công cụ cho nhân viên có thể làm việc và giao tiếp nội bộ."
+                }
+            ]
         },
         {
             "_id": 4,
             "name": "Bảng giá",
-            "link": "detail__porcelain-teeth.html",
-            "status": "porcelain",
+            "link": "PriceList.page.html",
+            "status": "PriceList",
             "omegamenu": true,
             "childrens": null
         },
@@ -36,8 +82,8 @@
         {
             "_id": 5,
             "name": "Tin tức",
-            "link": "detail__planting-implant-teeth.html",
-            "status": "implant",
+            "link": "News.page.html",
+            "status": "news",
             "omegamenu": false,
             "childrens": [
                 {
@@ -69,16 +115,16 @@
         {
             "_id": 6,
             "name": "Đào tạo",
-            "link": "detail__planting-implant-teeth.html",
-            "status": "implant",
+            "link": "Training.page.html",
+            "status": "training",
             "omegamenu": false,
             "childrens": null
         },
         {
             "_id": 7,
             "name": "Tuyển dụng",
-            "link": "detail__treatment-teeth.html",
-            "status": "treatment",
+            "link": "Recruit.page.html",
+            "status": "recruit",
             "omegamenu": false,
             "childrens": null
         },

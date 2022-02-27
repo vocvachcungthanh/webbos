@@ -1,0 +1,77 @@
+{% extends "../layouts/master-layout.twig" %}
+{% set page = 'PriceList' %}
+
+{% block titlePage %}
+	Bảng giá
+{% endblock %}
+{% block stylePage %}
+	<link rel="stylesheet" href="./css/pages/PriceList.page.css"/>
+{% endblock %}
+{% block content %}
+	<section class="price-list">
+		<div class="price-list__banner bgc__gray--100">
+			<div class="container">
+				<div class="price-list__group d__flex">
+					<div class="price-list__banner--content">
+						<h2 class="title__global text__blue--200">
+							Bảng giá
+							<span class="price-list__span text__gray--600">
+								các gói dịch vụ BOS
+							</span>
+						</h2>
+						<div class="price-list__desc text__gray--600">
+							BOS tính chi phí chính xác đến từng user và tính năng,
+							<br>
+							khách hàng chỉ phải trả những gì mình sử dụng.
+						</div>
+						<a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+					</div>
+					<div class="price-list__image frame">
+						<img src="images/priceList.svg" alt="priceList.svg">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			{% include "../components/PriceList.component.twig" %}
+		</div>
+	</section>
+	{% include "../components/GlobalHeader.component.twig" with {title:"Bạn chưa chọn được gói dịch vụ phù hợp?", info:"BOS sẽ tư vấn giải pháp phù hợp nhất với bạn trong 24h làm việc!", btn:"Tôi cần tư vấn thêm"} %}
+	<section class="question">
+		<div class="container">
+			<h2 class="title__global text__blue--200 text__center">
+				Câu hỏi thường gặp
+			</h2>
+			<div class="question__group d__flex text__black--900">
+				<div class="question__image frame">
+					<img src="images/question.svg" alt="question.svg">
+				</div>
+				<div class="question__box">
+					<div class="question__container">
+						{% for item in 1..6 %}
+							<div class="question__item ">
+								<div class="question__header d__flex {{loop.index == 6 ? 'active' : ''}}">
+									<span class="question__old">
+										{{loop.index}}
+									</span>
+									<h3 class="question__title">
+										Khi tôi mua vĩnh viễn thì phần mềm có được bảo hành không? Chi phí bảo trì khi hết bảo hành là bao nhiêu?
+									</h3>
+									<span class="question__arrow"></span>
+								</div>
+								<div class="question__body" style="{{loop.index == 6 ? 'display:block' : ''}}">
+									<div class="question__desc">
+										Trong trường hợp Mua vĩnh viễn, phần mềm sẽ được bảo hành miễn phí trong suốt 12 tháng kể từ ngày bàn giao. Trong thời gian bảo hành quý bạn sẽ được cập nhật các bản vá lỗi, một số tính năng mới miễn phí.
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		Sau thời gian bảo hành, nếu quý bạn có nhu cầu, chúng tôi có dịch vụ bảo trì phần mềm hằng năm với chi phí là 10%/ hợp đồng ban đầu/ năm.
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			{% include "../components/Pagination.component.twig" %}
+		</div>
+	</section>
+	{% include "../components/GlobalHeader.component.twig" with {title:"Dùng thử miễn phí 30 ngày", info:"Tổng đài tư vấn miễn phí: 1900 1066", btn:"Đăng ký dùng thử"} %}
+{% endblock %}

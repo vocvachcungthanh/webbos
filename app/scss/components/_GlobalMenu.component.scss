@@ -1,0 +1,59 @@
+.global {
+    &__menu {
+        &--container {
+            max-width: 989px;
+            width: 100%;
+            margin: auto;
+        }
+
+        &--slide {
+            margin-left: -1.6rem;
+            margin-right: -1.6rem;
+            .slick-list {
+                padding: 2.2rem 0 2rem 0;
+                .slick-current {
+                    .news__menu--link {
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            width: 100%;
+                            bottom: 0;
+                            height: 0.3rem;
+                            background-color: map-get($colors, "green-200");
+                        }
+                    }
+                }
+            }
+        }
+        &--item {
+            padding: 0 1.6rem;
+        }
+        &--link {
+            @include cutOne();
+            padding: 2.2rem 0;
+            font-weight: 500;
+            line-height: 2rem;
+            font-size: 1.4rem;
+            position: relative;
+            transition: 0.2s all;
+            &::before {
+                transition: 0.2s all;
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 0;
+                bottom: 0;
+                height: 0.3rem;
+                background-color: map-get($colors, "green-200");
+            }
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

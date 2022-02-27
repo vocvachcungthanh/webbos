@@ -1,0 +1,17 @@
+<div class="news__other">
+	<div class="container">
+		<h2 class="title__global news__other--title text__blue--200">
+			Các bài viết khác
+		</h2>
+		<div class="news__other--body">
+			{% set newsArray = 1..3 %}
+			{% include "../components/News.component.twig" with newsArray %}
+			{% include "../components/News.component.twig" with newsArray %}
+			{% include "../components/News.component.twig" with newsArray %}
+
+		</div>
+		<div class="news__other--pagination">
+			{% include "../components/Pagination.component.twig" %}
+		</div>
+	</div>
+</div>

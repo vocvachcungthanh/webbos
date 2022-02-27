@@ -99,16 +99,7 @@
 	<section class="p__t--64">
 		{% include "../components/TrustBusiness.compoent.twig" %}
 	</section>
-	<section class="global__header text__violet--500 text__center">
-		<div class="container">
-			<h2 class="title__global global__header--title">
-				Có thể bạn quan tâm
-			</h2>
-			<p class="global__header--info">
-				Các công cụ khác giúp bạn điều hành doanh nghiệp tốt hơn
-			</p>
-		</div>
-	</section>
+	{% include "../components/GlobalHeader.component.twig" with {title:"Có thể bạn quan tâm", info:"Các công cụ khác giúp bạn điều hành doanh nghiệp tốt hơn"} %}
 	<section class="finance bgc__gray--300">
 		<div class="container">
 			<h1 class="title__global text__blue--200 text__center">

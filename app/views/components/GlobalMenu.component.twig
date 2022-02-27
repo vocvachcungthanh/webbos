@@ -1,0 +1,17 @@
+<div class="global__menu bgc__gray--100">
+	<div class="container">
+		<div class="global__menu--container">
+			<div class="global__menu--slide">
+				{% for item in globalMenus %}
+					<div class="global__menu--item">
+						<a href="{{item.link}}" class="global__menu--link text__blue--200" title=" {{item.name}}">
+							{{item.name}}
+						</a>
+					</div>
+				{% endfor %}
+
+
+			</div>
+		</div>
+	</div>
+</div>

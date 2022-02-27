@@ -75,6 +75,11 @@ a {
             margin-top: 1.6rem;
             margin-bottom: 0;
         }
+        .btn__detail {
+            border: 2px solid map-get($colors, "green-200");
+            box-shadow: none;
+            margin-top: 2.4rem;
+        }
     }
 }
 .m__t--32 {

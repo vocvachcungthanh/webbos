@@ -33,6 +33,15 @@
         &--1000 {
             color: map-get($colors, "blue-1000");
         }
+        &--1001 {
+            color: map-get($colors, "blue-1001");
+        }
+        &--1002 {
+            color: map-get($colors, "blue-1002");
+        }
+        &--1003 {
+            color: map-get($colors, "blue-1003");
+        }
     }
     &__gray {
         &--100 {
@@ -84,5 +93,10 @@
     }
     &__center {
         text-align: center;
+    }
+    &__orange {
+        &--900 {
+            color: map-get($colors, "orange-900");
+        }
     }
 }

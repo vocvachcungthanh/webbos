@@ -1,0 +1,115 @@
+<div class="price-list__container">
+	{% for item in   [
+                                        {
+                                            "name":"Gói số 1",
+                                            "price":"60.000đ",
+                                            "info":"Bao gồm 20/60 tính năng:",
+                                            "children":[
+                                                {
+                                                    "title":"CRM",
+                                                    "check":true
+                                                },
+                                                {
+                                                    "title":"HRM",
+                                                    "check":false
+                                                },
+                                                {
+                                                    "title":"Công việc",
+                                                    "check":false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name":"Gói số 2",
+                                            "price":"120.000đ",
+                                            "info":"Bao gồm 40/60 tính năng:",
+                                            "children":[
+                                                {
+                                                    "title":"CRM",
+                                                    "check":true
+                                                },
+                                                {
+                                                    "title":"HRM",
+                                                    "check":true
+                                                },
+                                                {
+                                                    "title":"Công việc",
+                                                    "check":false
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name":"Gói số 3",
+                                            "price":"200.000đ",
+                                            "info":"Bao gồm 60/60 tính năng:",
+                                            "children":[
+                                                {
+                                                    "title":"CRM",
+                                                    "check":true
+                                                },
+                                                {
+                                                    "title":"HRM",
+                                                    "check":true
+                                                },
+                                                {
+                                                    "title":"Công việc",
+                                                    "check":true
+                                                }
+                                            ]
+                                        }
+
+                                    ]
+                    %}
+		<div class="price-list__item">
+
+			<div class="price-list__header">
+				<h3 class="price-list__name text__gray--700">
+					{{item.name}}
+				</h3>
+
+				<h2 class="
+																																																																																																																																													                                    price-list__price
+																																																																																																																																													                                    {% if loop.index == 1 %}
+																																																																																																																																													                                        text__green--200
+																																																																																																																																													                                    {% elseif loop.index == 2 %}
+																																																																																																																																													                                        text__blue--200
+																																																																																																																																													                                    {% else %}
+																																																																																																																																													                                        text__orange--900
+																																																																																																																																													                                    {% endif %}
+																																																																																																																																													                                    ">
+					{{item.price}}
+					<time class="price-list__date">
+						người/tháng
+					</time>
+				</h2>
+				<p class="price-list__info text__gray--700">
+					{{item.info}}
+				</p>
+			</div>
+			<div class="price-list__body">
+
+				{% for value in item.children %}
+					<h3 class="price-list__title text__gray--700">
+						{{value.title}}
+					</h3>
+					<ul class="price-list__ul">
+						{% for k in 1..10 %}
+							<li class="d__flex text__gray--700">
+								<span class="price-list__icon">
+									<img src="images/icons/{{value.check ? 'icon__check2.svg' : 'no__check.svg'}}" alt="{{value.check ? 'icon__check2.svg' : 'no__check.svg'}}">
+								</span>
+								<span class="price-list__text">Quản lý hợp đồng lao động</span>
+
+							</li>
+						{% endfor %}
+					</ul>
+				{% endfor %}
+
+			</div>
+			<div class="price-list__footer">
+				<a href="#" class="btn price__btn text__blue--900 bgc__white--100" title="Đăng ký">Đăng ký</a>
+			</div>
+		</div>
+	{% endfor %}
+
+</div>

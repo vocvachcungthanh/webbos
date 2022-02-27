@@ -1,0 +1,92 @@
+{% extends "../layouts/master-layout.twig" %}
+{% set page = 'training' %}
+{% block titlePage %}
+	Đào tạo
+{% endblock %}
+{% block stylePage %}
+	<link rel="stylesheet" href="./css/pages/Training.page.css"/>
+{% endblock %}
+{% block content %}
+	<section class="training">
+		<div class="training__banner">
+			<div class="container">
+				<div class="training__banner--group d__flex">
+					<div class="training__banner--content">
+						<h1 class="title__global training__banner--title text__blue--200">
+							Đào tạo quản lý
+						</h1>
+						<h2 class="training__banner--info text__gray--600">
+							Chia sẻ kiến thức, thay đổi góc nhìn, vận dụng quan điểm mới
+						</h2>
+						<div class="training__banner--desc text__gray--600">
+							Các chương trình tư vấn & huấn luyện nâng tầm quản trị vận hành công ty theo hướng bài bản; các giải pháp công nghệ ứng dụng quản lý đồng bộ hướng tới chuyển đổi số hiệu quả
+						</div>
+						<a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký khóa học">Đăng ký khóa học</a>
+					</div>
+					<div class="training__banner--image frame">
+						<img src="images/banner__training.svg" alt="banner__training.svg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="news">
+		{% include "../components/GlobalMenu.component.twig" with {
+            globalMenus:[
+                {
+                    "name":"Setup công ty",
+                    "link":"#"
+                },
+                 {
+                    "name":"Hệ thống tài chính",
+                    "link":"#"
+                },
+                 {
+                    "name":"Kế toán & Thuế",
+                    "link":"#"
+                },
+                 {
+                    "name":"Kinh doanh",
+                    "link":"#"
+                },
+                 {
+                    "name":"Quản trị nhân sự",
+                    "link":"#"
+                },
+                 {
+                    "name":"Marketing & Bán hàng",
+                    "link":"#"
+                }
+            ]
+        } %}
+	</section>
+	<section class="training">
+		{% for item in 1..4 %}
+			<div class="training__item">
+				<div class="container">
+					<div class="training__item--group d__flex">
+						<a href="DetailTraining.page.html" class="training__item--image frame" title="Học quản trị, vận hành công ty bài bản">
+							<img src="images/training__{{loop.index}}.svg" alt="training__{{loop.index}}.svg">
+						</a>
+						<div class="training__item--content">
+							<h3 class="training__item--title">
+								<a href="DetailTraining.page.html" class="text__blue--200" title="Học quản trị, vận hành công ty bài bản">
+									Học quản trị, vận hành công ty bài bản
+								</a>
+							</h3>
+							<div class="training__item--desc text__gray--500">
+								Tất cả những công việc lớn lao đều phải bắt đầu bằng từng bước nhỏ, việc chuẩn hóa dữ liệu cũng vậy, muốn công ty hoạt động hiệu quả bao nhiêu thì phần mềm quản trị cũng cần chuẩn bấy nhiêu. Tất cả những công việc lớn lao đều phải bắt đầu bằng từng bước nhỏ,  việc chuẩn hóa dữ liệu cũng bắt đầu bằng từng bước nhỏ vậy, muốn công ty hoạt động hiệu quả bao nhiêu thì phần mềm quản trị cũng cần chuẩn bấy nhiêu.
+							</div>
+							{% include "../components/View.component.twig" with {link:"DetailTraining.page.html"} %}
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+		<div class="training__pagination">
+			{% include "../components/Pagination.component.twig" %}
+		</div>
+	</section>
+	{% include "../components/Experience.component.twig" %}
+{% endblock %}
+{% block scriptPage %}{% endblock %}

@@ -22,7 +22,7 @@
 */
 @import "./addons/addon-menu";
 @import "./addons/addon-logo";
-// @import "./addons/addon-modal";
+@import "./addons/addon-modal";
 
 /**
 *@ layout
@@ -39,3 +39,15 @@
 @import "./components/TrustBusiness.component";
 @import "./components/Feedback.component";
 @import "./components/Product.component";
+
+@import "./components/pagination.component";
+
+@import "./components/NewsOther.component";
+@import "./components/Post.component";
+@import "./components/GlobalMenu.component";
+
+@import "./components/Experience.component";
+
+@import "./components/BannerGlobal.component";
+
+@import "./components/ModuleRecruit.component";
