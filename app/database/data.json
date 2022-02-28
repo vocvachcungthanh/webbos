@@ -132,8 +132,8 @@
         {
             "_id": 8,
             "name": "Hỗ trợ",
-            "link": "page__result.html",
-            "status": "result",
+            "link": "Support.page.html",
+            "status": "support",
             "childrens": null,
             "omegamenu": false
         },

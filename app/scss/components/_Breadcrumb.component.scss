@@ -1,0 +1,27 @@
+.breadcrumb {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding-top: 2.4rem;
+    padding-bottom: 4rem;
+    li {
+        &:last-child {
+            a {
+                font-weight: 500;
+            }
+        }
+        &:not(:first-child) {
+            margin-left: 1.2rem;
+            position: relative;
+            &::before {
+                content: "/";
+                position: absolute;
+                left: -0.9rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

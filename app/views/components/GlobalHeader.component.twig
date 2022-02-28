@@ -1,5 +1,10 @@
 <section class="global__header text__violet--500 text__center">
 	<div class="container">
+        {% if bg %}
+            <div class="header__image">
+                <img src="{{bg}}" alt="">
+            </div>
+        {% endif %}
 		<h2 class="title__global global__header--title">
 			{{title}}
 		</h2>
@@ -11,6 +16,5 @@
 				{{btn}}
 			</a>
 		{% endif %}
-
 	</div>
 </section>

@@ -1,0 +1,24 @@
+
+<div class="question__box">
+    <div class="question__container">
+        {% for item in 1..6 %}
+            <div class="question__item ">
+                <div class="question__header d__flex {{loop.index == 6 ? 'active' : ''}}">
+                    <span class="question__old">
+                        {{loop.index}}
+                    </span>
+                    <h3 class="question__title">
+                        Khi tôi mua vĩnh viễn thì phần mềm có được bảo hành không? Chi phí bảo trì khi hết bảo hành là bao nhiêu?
+                    </h3>
+                    <span class="question__arrow"></span>
+                </div>
+                <div class="question__body" style="{{loop.index == 6 ? 'display:block' : ''}}">
+                    <div class="question__desc">
+                        Trong trường hợp Mua vĩnh viễn, phần mềm sẽ được bảo hành miễn phí trong suốt 12 tháng kể từ ngày bàn giao. Trong thời gian bảo hành quý bạn sẽ được cập nhật các bản vá lỗi, một số tính năng mới miễn phí.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Sau thời gian bảo hành, nếu quý bạn có nhu cầu, chúng tôi có dịch vụ bảo trì phần mềm hằng năm với chi phí là 10%/ hợp đồng ban đầu/ năm.
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

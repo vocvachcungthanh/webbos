@@ -80,6 +80,18 @@ a {
             box-shadow: none;
             margin-top: 2.4rem;
         }
+        .container {
+            position: relative;
+            .header__image {
+                position: absolute;
+                bottom: -32%;
+                max-width: 27rem;
+                width: 100%;
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
     }
 }
 .m__t--32 {

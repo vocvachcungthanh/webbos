@@ -1,0 +1,79 @@
+{% extends "../layouts/master-layout.twig" %}
+{% set page = 'support' %}
+{% block titlePage %}
+	 Câu hỏi thường gặp
+{% endblock %}
+{% block stylePage %}
+	<link rel="stylesheet" href="./css/pages/support4.page.css"/>
+{% endblock %}
+{% block content %}
+    {% include "../components/BannerGlobal.component.twig" with {title:"Trung tâm hỗ trợ của BOS - 19001234. Hoạt động từ 8:00 - 17:30", bg:"images/banner__support.svg", class:"text__white--100"} %}
+    <div class="container">
+        <ul class="breadcrumb d__flex">
+            <li>
+                <a href="#" title="5 bước bắt đầu để sử dụng BOS" class="text__gray--700">
+                   Hỗ trợ
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Câu hỏi thường gặp" class="text__gray--700">
+                    Câu hỏi thường gặp
+                </a>
+            </li>
+        </ul>
+        <div class="support d__flex">
+            <div class="support__item">
+                <h1 class="support__title text__blue--200">
+                    Bắt đầu
+                </h1>
+                <ul class="support__ul">
+                    <li class="active">
+                        <a href="#" title="5 bước bắt đầu để sử dụng BOS" class="text__black--900">
+                            5 bước bắt đầu để sử dụng BOS
+                        </a>
+                    </li>
+                     <li>
+                        <a href="#" title="Tải lên hồ sư nhân sự" class="text__black--900">
+                            Tải lên hồ sư nhân sự
+                        </a>
+                    </li>
+                     <li>
+                        <a href="#" title="Phân quyền người dùng" class="text__black--900">
+                            Phân quyền người dùng
+                        </a>
+                    </li>
+                     <li>
+                        <a href="#" title="Cài đặt đối tượng, phân hệ" class="text__black--900">
+                            Cài đặt đối tượng, phân hệ
+                        </a>
+                    </li>
+                     <li>
+                        <a href="#" title="Thanh toán, đối soát" class="text__black--900">
+                           Thanh toán, đối soát
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="support__content bgc__gray--100">
+               <section class="question">
+                    <div class="container">
+                        <div class="question__group d__flex text__black--900">
+
+                            {% include "../components/Question.component.twig" %}
+                        </div>
+                        {% include "../components/Pagination.component.twig" %}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    {% include "../components/GlobalHeader.component.twig" with {title:"Trung tâm hỗ trợ BOS - 19001234", info:"Hoạt động từ 8:00 - 17:30", bg:"images/bg_trustBusiness.svg"}  %}
+    <div class="support__trustBusiness">
+        {% include "../components/TrustBusiness.compoent.twig" %}
+    </div>
+{% endblock %}
+
+{% block scriptPage %}
+
+{% endblock %}

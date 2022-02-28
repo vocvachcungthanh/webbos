@@ -1,0 +1,44 @@
+/**
+*@helpers
+*/
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+.support {
+    column-gap: 2.4rem;
+    padding-bottom: 12.8rem;
+    &__item {
+        flex-shrink: 0;
+        max-width: 25rem;
+        width: 100%;
+    }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    &__ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin-bottom: 0.8rem;
+            a {
+                font-size: 1.4rem;
+                line-height: 2rem;
+            }
+            &.active {
+                a {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    &__content {
+        padding: 2.4rem;
+        border-radius: 0.8rem;
+    }
+    &__trustBusiness {
+        padding-top: 10.4rem;
+    }
+}

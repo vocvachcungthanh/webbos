@@ -1,0 +1,213 @@
+{% extends "../layouts/master-layout.twig" %}
+{% set page = 'support' %}
+{% block titlePage %}
+	Hỗ trợ
+{% endblock %}
+{% block stylePage %}
+	<link rel="stylesheet" href="./css/pages/support.page.css"/>
+{% endblock %}
+{% block content %}
+    {% include "../components/BannerGlobal.component.twig" with {title:"Trung tâm hỗ trợ của BOS - 19001234. Hoạt động từ 8:00 - 17:30", bg:"images/banner__support.svg", class:"text__white--100"} %}
+    <section class="menu__support bgc__gray--100">
+        <div class="container">
+            <ul class="menu__support--list d__flex">
+                <li>
+                    <a href="#" class="menu__support--link d__flex text__blue--200" title="Giới thiệu tổng quát">
+                        Giới thiệu tổng quát
+                        <span class="menu__support--icon">
+                            <img src="images/icons/arrow__support.svg" alt="arrow__support.svg">
+                        </span>
+                    </a>
+                    <ul class="bgc__white--100">
+                        <li>
+                            <a class="text__black--900 d__flex" href="Support4.page.html" title="Bắt đầu">
+                                Bắt đầu
+                            </a>
+                        </li>
+                         <li >
+                            <a class="text__black--900 d__flex" href="#" title="Nâng cao">
+                              Nâng cao
+                            </a>
+                        </li>
+                         <li >
+                            <a class="text__black--900 d__flex" href="#" title="Câu hỏi thường gặp">
+                               Câu hỏi thường gặp
+                            </a>
+                        </li>
+                        <li >
+                            <a class="text__black--900 d__flex" href="#" title="Cập nhật tính năng">
+                              Cập nhật tính năng
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="menu__support--mega">
+                    <a href="#" class="menu__support--link d__flex text__blue--200" title="Hướng dẫn sử dụng">
+                       Hướng dẫn sử dụng
+                       <span class="menu__support--icon">
+                            <img src="images/icons/arrow__support.svg" alt="arrow__support.svg">
+                        </span>
+                    </a>
+                    <div class="omega bgc__white--100">
+                        <div class="container">
+                            <div class="omega__slide">
+                                <div class="omega__slide--slick">
+                                  {% for item  in 1..6 %}
+                                       <div class="omega__slide--item">
+                                     <div class="omega__box ">
+                                        <h3 class="omega__title text__violet--600">
+                                            {% if loop.index == 1 %}
+                                                    BOS - HRM
+                                                {% elseif loop.index == 2 %}
+                                                    BOS - Work
+                                                {% else %}
+                                                    BOS - CRM
+                                            {% endif %}
+                                        </h3>
+                                        <p class="omega__info text__black--900">
+                                            Phân hệ cung cấp bộ công cụ cho nhân viên có thể làm việc và giao tiếp nội bộ.
+                                        </p>
+                                        <div class="omega__list">
+                                            {% for item in 1..7 %}
+                                                <a href="#"  class="omega__link text__black--900 d__flex" title="">
+                                                    <span class="omega__icon bgc__blue--500">
+
+                                                        <img src="images/icons/icon__tools.svg" alt="icon__tools.svg">
+                                                    </span>
+                                                    <div class="omega__content">
+                                                        <h3 class="omega__content--title">
+                                                            BOS - Tài chính
+                                                        </h3>
+                                                        <p class="omega__content--desc">
+                                                            Quản lý tài chính công ty
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                   </div>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                 <li>
+                    <a href="Support5.page.html" class="menu__support--link d__flex text__blue--200" title="Câu hỏi thường gặp">
+                      Câu hỏi thường gặp
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="support">
+        <div class="container">
+            <h2 class="title__global text__blue--200">
+                Giới thiệu tổng quát & cài đặt ban đầu
+            </h2>
+            <div class="support__body">
+                {% for item in 1..4 %}
+                    <a href="#" class="support__item" title="Bắt đầu">
+                        <div class="support__image frame">
+                            <img src="images/support.svg" alt="support.svg">
+                        </div>
+                        <h3 class="support__title text__blue--200">
+                            Bắt đầu
+                        </h3>
+                        <p class="support__desc text__gray--700">
+                            5 bước cơ bản để bắt đầu <br>
+                            sử dụng BOS
+                        </p>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+     <section class="support bgc__gray--100">
+        <div class="container">
+            <h2 class="title__global text__blue--200">
+               BOS - Tài chính
+            </h2>
+            <div class="support__body">
+                {% for item in 1..8 %}
+                    <a href="#" class="support__item" title="Bắt đầu">
+                        <div class="support__image frame">
+                            <img src="images/support.svg" alt="support.svg">
+                        </div>
+                        <h3 class="support__title text__blue--200">
+                            Bắt đầu
+                        </h3>
+                        <p class="support__desc text__gray--700">
+                            5 bước cơ bản để bắt đầu <br>
+                            sử dụng BOS
+                        </p>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="support">
+        <div class="container">
+            <h2 class="title__global text__green--200">
+             BOS - Kinh doanh
+            </h2>
+            <div class="support__body">
+                {% for item in 1..8 %}
+                    <a href="#" class="support__item" title="Bắt đầu">
+                        <div class="support__image frame">
+                            <img src="images/support.svg" alt="support.svg">
+                        </div>
+                        <h3 class="support__title text__blue--200">
+                            Bắt đầu
+                        </h3>
+                        <p class="support__desc text__gray--700">
+                            5 bước cơ bản để bắt đầu <br>
+                            sử dụng BOS
+                        </p>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="support bgc__gray--100">
+        <div class="container">
+            <h2 class="title__global text__blue--200">
+             BOS - Nhân sự
+            </h2>
+            <div class="support__body">
+                {% for item in 1..10 %}
+                    <a href="#" class="support__item" title="Bắt đầu">
+                        <div class="support__image frame">
+                            <img src="images/support.svg" alt="support.svg">
+                        </div>
+                        <h3 class="support__title text__blue--200">
+                            Bắt đầu
+                        </h3>
+                        <p class="support__desc text__gray--700">
+                            5 bước cơ bản để bắt đầu <br>
+                            sử dụng BOS
+                        </p>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scriptPage %}
+<script>
+
+    function omeGaMenuSupport() {
+        $(".omega__slide--slick").slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: false,
+            infinite: false,
+            arrows: true,
+            dots: false,
+        });
+    }
+    omeGaMenuSupport();
+</script>
+{% endblock %}
