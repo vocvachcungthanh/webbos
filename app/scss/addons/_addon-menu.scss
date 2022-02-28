@@ -248,7 +248,7 @@
                         font-size: 1.5rem;
                         line-height: 20px;
                         color: #fff;
-                        padding: 2rem 1.2rem;
+                        padding: 2rem 1rem;
 
                         position: relative;
                         &::before {
@@ -356,6 +356,7 @@
             .menu {
                 .menu__list {
                     .menu__link {
+                        padding: 2rem 1.2rem;
                         font-size: 1.6rem;
                         line-height: 2rem;
                     }

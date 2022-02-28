@@ -145,3 +145,24 @@
         line-height: 1.406rem;
     }
 }
+
+@media (max-width: 1199.98px) {
+    .footer__bottom--group {
+        column-gap: 2.5rem;
+    }
+    .footer__bottom--item {
+        .footer__list {
+            &:first-child {
+                column-gap: 2.5rem;
+                grid-template-columns: repeat(2, auto);
+            }
+        }
+        &:nth-child(2) {
+            column-gap: 2.5rem;
+        }
+        &:first-child,
+        &:last-child {
+            max-width: 200px;
+        }
+    }
+}

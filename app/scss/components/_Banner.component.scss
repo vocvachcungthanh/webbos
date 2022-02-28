@@ -104,6 +104,25 @@
     }
 }
 
+@media (max-width: 1199.98px) {
+    .banner {
+        padding: 8rem 0;
+    }
+    .banner__image {
+        max-width: 500px;
+    }
+    .banner__title {
+        font-size: 5rem;
+    }
+    .banner__info {
+        font-size: 2.5rem;
+    }
+    .banner__desc {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+    }
+}
+
 @keyframes circle__1 {
     0% {
         transform: scale(0);

@@ -244,3 +244,48 @@
         column-gap: 4.8rem;
     }
 }
+
+@media (max-width: 1199.98px) {
+    .establish__image {
+        max-width: 500px;
+    }
+    .establish__group {
+        column-gap: 3rem;
+    }
+    .establish {
+        padding: 5rem 0;
+    }
+    .establish__desc {
+        margin-top: 2rem;
+    }
+    .different {
+        padding-top: 0;
+        padding-bottom: 5rem;
+    }
+    .tools {
+        padding: 5rem 0;
+    }
+    .feedback {
+        padding: 5rem 0;
+    }
+    .feedback__container {
+        padding: 3rem;
+    }
+    .feedback {
+        .slick-arrow {
+            &.slick-next,
+            &.slick-prev {
+                top: 90%;
+            }
+        }
+    }
+    .news {
+        padding: 5rem 0;
+    }
+    .news__header {
+        margin-bottom: 3rem;
+    }
+    .news__body {
+        column-gap: 3rem;
+    }
+}

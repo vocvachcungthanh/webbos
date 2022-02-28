@@ -103,3 +103,9 @@ a {
 .p__t--64 {
     padding-top: 6.4rem;
 }
+
+@media (max-width: 1199.98rem) {
+    .title__global {
+        font-size: 3rem;
+    }
+}
