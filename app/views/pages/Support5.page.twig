@@ -28,45 +28,70 @@
                 </h1>
                 <ul class="support__ul">
                     <li class="active">
-                        <a href="#" title="5 bước bắt đầu để sử dụng BOS" class="text__black--900">
-                            5 bước bắt đầu để sử dụng BOS
+                        <a href="#" title="BOS đăng nhập" class="text__black--900">
+                          BOS đăng nhập
                         </a>
                     </li>
                      <li>
-                        <a href="#" title="Tải lên hồ sư nhân sự" class="text__black--900">
-                            Tải lên hồ sư nhân sự
+                        <a href="#" title="BOS Nhân sự" class="text__black--900">
+                            BOS Nhân sự
                         </a>
                     </li>
                      <li>
-                        <a href="#" title="Phân quyền người dùng" class="text__black--900">
-                            Phân quyền người dùng
+                        <a href="#" title="BOS Tài chính" class="text__black--900">
+                        BOS Tài chính
                         </a>
                     </li>
                      <li>
-                        <a href="#" title="Cài đặt đối tượng, phân hệ" class="text__black--900">
-                            Cài đặt đối tượng, phân hệ
+                        <a href="#" title="BOS Kinh doanh" class="text__black--900">
+                           BOS Kinh doanh
                         </a>
                     </li>
                      <li>
-                        <a href="#" title="Thanh toán, đối soát" class="text__black--900">
-                           Thanh toán, đối soát
+                        <a href="#" title="BOS Công việc" class="text__black--900">
+                          BOS Công việc
                         </a>
                     </li>
                 </ul>
 
             </div>
-            <div class="support__content bgc__gray--100">
+            <div class="support__content support__cu">
                <section class="question">
                     <div class="container">
                         <div class="question__group d__flex text__black--900">
 
-                            {% include "../components/Question.component.twig" %}
+                           <div class="question__box">
+                            <div class="question__container">
+                                {% for item in 1..12 %}
+                                    <div class="question__item ">
+                                        <div class="question__header d__flex {{loop.index == 12 ? 'active' : ''}}">
+                                            <span class="question__old">
+                                                {{loop.index}}
+                                            </span>
+                                            <h3 class="question__title">
+                                                Khi tôi mua vĩnh viễn thì phần mềm có được bảo hành không? Chi phí bảo trì khi hết bảo hành là bao nhiêu?
+                                            </h3>
+                                            <span class="question__arrow"></span>
+                                        </div>
+                                        <div class="question__body" style="{{loop.index == 12 ? 'display:block' : ''}}">
+                                            <div class="question__desc">
+                                                Trong trường hợp Mua vĩnh viễn, phần mềm sẽ được bảo hành miễn phí trong suốt 12 tháng kể từ ngày bàn giao. Trong thời gian bảo hành quý bạn sẽ được cập nhật các bản vá lỗi, một số tính năng mới miễn phí.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Sau thời gian bảo hành, nếu quý bạn có nhu cầu, chúng tôi có dịch vụ bảo trì phần mềm hằng năm với chi phí là 10%/ hợp đồng ban đầu/ năm.
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
                         </div>
-                        {% include "../components/Pagination.component.twig" %}
+                    </div>
+
                     </div>
                 </section>
             </div>
+            <div class="text__center support__pagination">
+                {% include "../components/Pagination.component.twig" %}
+            </div>
         </div>
+
     </div>
     {% include "../components/GlobalHeader.component.twig" with {title:"Trung tâm hỗ trợ BOS - 19001234", info:"Hoạt động từ 8:00 - 17:30", bg:"images/bg_trustBusiness.svg"}  %}
     <div class="support__trustBusiness">
