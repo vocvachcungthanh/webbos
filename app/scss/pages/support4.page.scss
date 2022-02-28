@@ -39,6 +39,7 @@
     &__content {
         border-radius: 0.8rem;
         overflow: hidden;
+        flex: 1;
         .question {
             padding: 0;
             &__group {
