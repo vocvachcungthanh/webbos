@@ -1,0 +1,145 @@
+/**
+*@helpers
+*/
+@import "../helpers/variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+.contact__banner {
+    padding-top: 18.7rem;
+    padding-bottom: 11rem;
+    background: url("../../images/bg__banner-contact.svg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &--group {
+        align-items: center;
+        column-gap: 7.3rem;
+    }
+    .title__global {
+        font-size: 5.915rem;
+        line-height: 6.932rem;
+    }
+    &--desc {
+        margin-top: 1.177rem;
+        font-size: 2.976rem;
+        font-weight: 700;
+        line-height: 3.571rem;
+        margin-bottom: 2.4rem;
+    }
+    &--info {
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        margin-bottom: 2.4rem;
+    }
+    &--content {
+        max-width: 497px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+    &--image {
+        padding-top: 29.42%;
+    }
+}
+.contact__body {
+    padding-top: 8rem;
+    padding-bottom: 17.7rem;
+    display: grid;
+    column-gap: 6.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    &--item {
+        h3 {
+            margin-bottom: 2rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 2.8rem;
+        }
+    }
+    &--form {
+        box-shadow: 0px 0.4rem 1.5rem rgba(0, 0, 0, 0.25);
+        border-radius: 0.8rem;
+        padding: 2.4rem;
+    }
+    .form {
+        &__group {
+            margin-bottom: 2.4rem;
+        }
+        &__label {
+            font-style: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            sup {
+                color: red;
+            }
+        }
+        &__control {
+            border: 1.5px solid map-get($colors, "gray-400");
+            box-sizing: border-box;
+            border-radius: 0.4rem;
+            padding: 0 1.2rem;
+            height: 4rem;
+            width: 100%;
+            background: transparent;
+
+            &:focus,
+            &:focus-visible {
+                border: 1.5px solid map-get($colors, "blue-1004");
+                outline: 0;
+            }
+            &::placeholder {
+                font-size: 1.3rem;
+                color: map-get($colors, "gray-400");
+            }
+        }
+        &__select {
+            -webkit-appearance: none;
+            background-image: url("../../images/icons/slect__arrow.svg");
+            background-repeat: no-repeat;
+            background-size: 10px;
+            background-position: calc(100% - 1.2rem) center;
+            option {
+                padding: 0.4rem 2.8rem;
+            }
+        }
+        &__row {
+            display: grid;
+            column-gap: 3.9rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__btn {
+            width: 100%;
+            border-radius: 4px;
+            height: 4rem;
+        }
+    }
+    .contact__item {
+        border-top: 1px solid map-get($colors, "gray-200");
+        &:not(:last-child) {
+            padding-bottom: 2rem;
+        }
+        .contact__group {
+            margin-top: 1.2rem;
+            display: flex;
+            align-items: center;
+            column-gap: 1.6rem;
+            p {
+                margin-bottom: 0;
+                &:first-child {
+                    font-weight: 500;
+
+                    min-width: 190px;
+                }
+            }
+        }
+    }
+}
+.contact__dk {
+    margin-bottom: 6.4rem;
+    .global__header {
+        .container {
+            .header__image {
+                bottom: 3.9rem;
+            }
+        }
+    }
+}

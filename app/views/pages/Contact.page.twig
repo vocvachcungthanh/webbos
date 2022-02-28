@@ -1,0 +1,220 @@
+{% extends "../layouts/master-layout.twig" %} {% set page = 'contact' %} {%
+block titlePage %} Liên hệ {% endblock %} {% block stylePage %}
+<link rel="stylesheet" href="./css/pages/Contact.page.css" />
+{% endblock %} {% block content %}
+
+<section class="contact__banner bgc__gray--100">
+    <div class="container">
+        <div class="contact__banner--group d__flex">
+            <div class="contact__banner--content">
+                <h2 class="title__global text__blue--200">Thông tin liên hệ</h2>
+                <div class="contact__banner--desc text__gray--600">
+                    Hãy liên hệ với chúng tôi để biết thêm nhiều thông tin hơn
+                </div>
+                <div class="contact__banner--info text__gray--600">
+                    Mọi thắc mắc của bạn sẽ được giải đáp bởi đội ngũ chăm sóc
+                    khách hàng chuyên nghiệp
+                </div>
+                <a
+                    href="#"
+                    class="btn banner__btn text__blue--900 bgc__green--200"
+                    title="Đăng ký"
+                    >Đăng ký</a
+                >
+            </div>
+            <div class="contact__banner--image frame">
+                <img
+                    src="images/banner__contact.svg"
+                    alt="banner__contact.svg"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="contact__body">
+        <div class="contact__body--item">
+            <h3 class="text__blue--200">
+                Công ty cổ phần giải pháp quản trị BOS
+            </h3>
+            <div class="contact__item">
+                <div class="contact__group">
+                    <p class="text__gray--600">Trụ sở tại Hà Nội</p>
+                    <p class="text__black--900">
+                        Tòa 34T Hoàng Đạo Thúy, Cầu Giấy, Hà Nội.
+                    </p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">Văn phòng tại Tp Hồ Chí Minh</p>
+                    <p class="text__black--900">
+                        Tòa 34T Hoàng Đạo Thúy, P.1, Quận 1, Tp Hồ Chí Minh.
+                    </p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">Số điện thoại</p>
+                    <p class="text__black--900">0123456789</p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">Hotline miền Bắc</p>
+                    <p class="text__black--900">0123456789</p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">Hotline miền Nam</p>
+                    <p class="text__black--900">0123456789</p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">Địa chỉ email</p>
+                    <p class="text__black--900">bos.info@gmail.com</p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">Hỗ trợ kỹ thuật</p>
+                    <p class="text__black--900">bos.info@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact__item">
+                <div class="contact__group">
+                    <p class="text__gray--600">Facebook Fanpage</p>
+                    <p class="text__black--900">123456789</p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">Zalo</p>
+                    <p class="text__black--900">0123456789</p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">BOS tuyển dụng</p>
+                    <p class="text__black--900">bos.info@gmail.com</p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">Kênh Youtube</p>
+                    <p class="text__black--900">www.youtube.com/bosvn</p>
+                </div>
+            </div>
+            <div class="contact__item">
+                <div class="contact__group">
+                    <p class="text__gray--600">Mã số thuế</p>
+                    <p class="text__black--900">123456789</p>
+                </div>
+                <div class="contact__group">
+                    <p class="text__gray--600">Trụ sở chính trên ĐKKD</p>
+                    <p class="text__black--900">
+                        Tòa 34T Hoàng Đạo Thúy, P.1, Quận 1, Tp Hồ Chí Minh.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <form action="" class="contact__body--form">
+            <div class="form__group">
+                <label for="" class="form__label">
+                    Họ và tên của bạn <sup>*</sup>
+                </label>
+                <input
+                    type="text"
+                    placeholder="Nhập họ và tên của bạn"
+                    class="form__control"
+                />
+            </div>
+            <div class="form__group">
+                <label for="" class="form__label">
+                    Giải pháp bạn quan tâm <sup>*</sup>
+                </label>
+                <select
+                    class="form__control form__select"
+                    placeholder="Chọn giải pháp/ứng dụng bạn quan tâm nhất"
+                >
+                    <option value="">Quản lý công việc</option>
+                    <option value="">Quản lý nhân sự</option>
+                    <option value="">Quản lý CRM</option>
+                    <option value="">Quản lý tổng thể</option>
+                </select>
+            </div>
+            <div class="form__row">
+                <div class="form__group">
+                    <label for="" class="form__label">
+                        Email <sup>*</sup>
+                    </label>
+                    <input
+                        type="text"
+                        placeholder="Nhập email cá nhân"
+                        class="form__control"
+                    />
+                </div>
+                <div class="form__group">
+                    <label for="" class="form__label">
+                        Số điện thoại <sup>*</sup>
+                    </label>
+                    <input
+                        type="number"
+                        placeholder="Nhập số điện thoại liên hệ"
+                        class="form__control"
+                    />
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__group">
+                    <label for="" class="form__label">
+                        Vị trí công việc <sup>*</sup>
+                    </label>
+                    <select
+                        class="form__control form__select"
+                        placeholder="Nhập vị trí công việc"
+                    >
+                        <option value="">Lãnh đạo (Chủ tịch, CEO,...)</option>
+                        <option value="">Quản lý nhân sự</option>
+                        <option value="">Quản lý CRM</option>
+                        <option value="">Nhân viên</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="" class="form__label">
+                        Tên công ty <sup>*</sup>
+                    </label>
+                    <input
+                        type="text"
+                        placeholder="Nhập số điện thoại liên hệ"
+                        class="form__control"
+                    />
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__group">
+                    <label for="" class="form__label">
+                        Tỉnh/thành phố <sup>*</sup>
+                    </label>
+                    <select
+                        class="form__control form__select"
+                        placeholder="Chọn tỉnh/thành phố"
+                    >
+                        <option value="">Quản lý công việc</option>
+                        <option value="">Quản lý nhân sự</option>
+                        <option value="">Quản lý CRM</option>
+                        <option value="">Quản lý tổng thể</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="" class="form__label">
+                        Quy mô nhân sự <sup>*</sup>
+                    </label>
+                    <select
+                        class="form__control form__select"
+                        placeholder="Nhập quy mô nhân sự"
+                    >
+                        <option value="">Dưới 10 nhân viên</option>
+                        <option value="">10 - 30 nhân viên</option>
+                        <option value="">30 - 100 nhân viên</option>
+                        <option value="">100 - 300 nhân viên</option>
+                        <option value="">Trên 300 nhân viên</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn form__btn bgc__blue--300 text__white--100">
+                Đăng ký
+            </button>
+        </form>
+    </div>
+</section>
+<div class="contact__dk">
+
+    {% include "../components/GlobalHeader.component.twig" with {title:"Đăng ký để được tư vấn", info:"BOS sẽ tư vấn giải pháp phù hợp nhất với bạn trong 24h làm việc!", bg:"images/contact__dk.svg",  btn:"Đăng ký",}  %}
+</div>
+{% include "../components/TrustBusiness.compoent.twig" %}
+{% endblock %}
