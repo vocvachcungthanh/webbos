@@ -30,8 +30,8 @@ closeMenu = () => {
     let menusClass = $(".box__container");
     $(".box__menu").on("click", function (e) {
         if (!menusClass.is(e.target) && menusClass.has(e.target).length === 0) {
-            $("body").removeClass("body__hidden");
-            $(".box__menu").removeClass("active");
+            // $("body").removeClass("body__hidden");
+            // $(".box__menu").removeClass("active");
         }
     });
 };

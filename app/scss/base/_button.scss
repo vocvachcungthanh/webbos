@@ -21,3 +21,48 @@
         color: map-get($colors, "blue-900");
     }
 }
+
+@media (min-width: 230px) {
+    .btn__toggle {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid map-get($colors, "white-100");
+        background-color: map-get($colors, "white-100");
+        border-radius: 0.2rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 0.8rem;
+        z-index: 1;
+        padding: 0;
+        &::before {
+            content: "+";
+            font-size: 1.8rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease;
+        }
+        &.active {
+            &::before {
+                color: red;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+    .btn__menu {
+        border-radius: 4px;
+        padding: 0;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
+}
+@media (min-width: 992px) {
+    .btn__menu {
+        display: none;
+    }
+    .btn__toggle {
+        display: none;
+    }
+}

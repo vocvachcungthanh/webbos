@@ -1,4 +1,101 @@
 $(document).ready(function () {
+    function omeGa() {
+        $(".omega__menu--container").slick({
+            slidesToShow: 3,
+            rows: 2,
+            slidesToScroll: 3,
+            autoplay: false,
+            infinite: false,
+            arrows: true,
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 767.98,
+                    settings: {
+                        slidesToShow: 5,
+                        arrows: false,
+                    },
+                },
+                {
+                    breakpoint: 575.98,
+                    settings: {
+                        slidesToShow: 1,
+                        rows: 4,
+                    },
+                },
+            ],
+        });
+    }
+    omeGa();
+    // menu
+    function appButton() {
+        var has = $('.menu li:has("ul")');
+        return has
+            ? has.append('<button class="btn btn__toggle"></button>')
+            : "";
+    }
+
+    appButton();
+
+    function onMenu() {
+        var button = $(".btn__toggle");
+        var hasMenu = $(".menu .menu__list  ul");
+        button.on("click", function () {
+            var __ = $(this).parent(".menu__list").children("ul");
+            hasMenu.not(__).slideUp();
+            button.not($(this)).removeClass("active");
+            __.slideToggle();
+            $(this).toggleClass("active");
+            $(".omega__menu--container").slick("setPosition").slick();
+        });
+    }
+    onMenu();
+
+    function openMenu() {
+        $(".btn__menu").on("click", function () {
+            $("body").addClass("body__hidden");
+            $(".addon__menu").toggleClass("active");
+        });
+    }
+    openMenu();
+
+    function closeMenu() {
+        var menusClass = $(".menu");
+        $(".box__menu").on("click", function (e) {
+            console.log(menusClass.has(e.target).length);
+            if (
+                !menusClass.is(e.target) &&
+                menusClass.has(e.target).length === 0
+            ) {
+                $("body").removeClass("body__hidden");
+                $(".addon__menu").removeClass("active");
+            }
+        });
+    }
+    closeMenu();
+
+    $(window).on("scroll", function () {
+        var height = $("#header").height();
+        if ($(this).scrollTop() > height) {
+            $(".back-top").addClass("active");
+            $(".header-body").addClass("active");
+        } else {
+            $(".back-top").removeClass("active");
+            $(".header-body").removeClass("active");
+        }
+    });
+    $(".back-top").on("click", function () {
+        $(".back-top").removeClass("active");
+        $("html, body").animate(
+            {
+                scrollTop: 0,
+            },
+            1000
+        );
+    });
+
+    //end menu
+
     function trustSlider() {
         $(".trust-business__slider").slick({
             slidesToShow: 6,
@@ -44,19 +141,6 @@ $(document).ready(function () {
     }
 
     feedback();
-
-    function omeGa() {
-        $(".omega__menu--container").slick({
-            slidesToShow: 3,
-            rows: 2,
-            slidesToScroll: 3,
-            autoplay: false,
-            infinite: false,
-            arrows: true,
-            dots: false,
-        });
-    }
-    omeGa();
 
     function menuSlide() {
         $(".global__menu--slide").slick({
