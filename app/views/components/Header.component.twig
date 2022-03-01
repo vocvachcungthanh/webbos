@@ -1,11 +1,25 @@
 <header id="header" class="header">
-	<div class="container">
-		<div class="header__top">
-			{% include "../addons/addon-logo.twig" %}
-			{% include "../addons/addon-menu.twig" %}
-			<button class="btn btn__registration text__blue--900 bgc__green--200">
-				Đăng ký
-			</button>
-		</div>
-	</div>
+    <div class="container">
+        <div class="header__top">
+            {% include "../addons/addon-logo.twig" %} {% include
+            "../addons/addon-menu.twig" %}
+            <button
+                type="button"
+                modal-show="show"
+                modal-data="#formContact"
+                class="btn btn__registration text__blue--900 bgc__green--200"
+            >
+                Đăng ký
+            </button>
+        </div>
+    </div>
 </header>
+<div class="bs-modal modal__recruit" id="formContact">
+    <div class="modal-frame">
+        <div class="content-modal">
+            <div class="module__contact">
+                {% include "./FormContact.component.twig" %}
+            </div>
+        </div>
+    </div>
+</div>

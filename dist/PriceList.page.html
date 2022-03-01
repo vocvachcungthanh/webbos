@@ -31,7 +31,6 @@
                     <a href="index.html" class="logo" title="suyn fashion" title="webiste bos">
                         <img src="images/icons/icon__logo.svg" alt="icon__logo.svg">
                     </a>
-
                     <div class="addon__menu">
                         <div class="box__menu">
                             <ul class="menu">
@@ -231,13 +230,100 @@
                             </ul>
                         </div>
                     </div>
-
-                    <button class="btn btn__registration text__blue--900 bgc__green--200">
+                    <button type="button" modal-show="show" modal-data="#formContact" class="btn btn__registration text__blue--900 bgc__green--200">
                         Đăng ký
                     </button>
                 </div>
             </div>
         </header>
+        <div class="bs-modal modal__recruit" id="formContact">
+            <div class="modal-frame">
+                <div class="content-modal">
+                    <div class="module__contact">
+                        <form action="" class="contact__body--form">
+                            <div class="form__group">
+                                <label for="" class="form__label">
+                                    Họ và tên của bạn <sup>*</sup>
+                                </label>
+                                <input type="text" placeholder="Nhập họ và tên của bạn" class="form__control" />
+                            </div>
+                            <div class="form__group">
+                                <label for="" class="form__label">
+                                    Giải pháp bạn quan tâm <sup>*</sup>
+                                </label>
+                                <select class="form__control form__select" placeholder="Chọn giải pháp/ứng dụng bạn quan tâm nhất">
+                                    <option value="">Quản lý công việc</option>
+                                    <option value="">Quản lý nhân sự</option>
+                                    <option value="">Quản lý CRM</option>
+                                    <option value="">Quản lý tổng thể</option>
+                                </select>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Email <sup>*</sup>
+                                    </label>
+                                    <input type="text" placeholder="Nhập email cá nhân" class="form__control" />
+                                </div>
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Số điện thoại <sup>*</sup>
+                                    </label>
+                                    <input type="number" placeholder="Nhập số điện thoại liên hệ" class="form__control" />
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Vị trí công việc <sup>*</sup>
+                                    </label>
+                                    <select class="form__control form__select" placeholder="Nhập vị trí công việc">
+                                        <option value="">Lãnh đạo (Chủ tịch, CEO,...)</option>
+                                        <option value="">Quản lý nhân sự</option>
+                                        <option value="">Quản lý CRM</option>
+                                        <option value="">Nhân viên</option>
+                                    </select>
+                                </div>
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Tên công ty <sup>*</sup>
+                                    </label>
+                                    <input type="text" placeholder="Nhập số điện thoại liên hệ" class="form__control" />
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Tỉnh/thành phố <sup>*</sup>
+                                    </label>
+                                    <select class="form__control form__select" placeholder="Chọn tỉnh/thành phố">
+                                        <option value="">Quản lý công việc</option>
+                                        <option value="">Quản lý nhân sự</option>
+                                        <option value="">Quản lý CRM</option>
+                                        <option value="">Quản lý tổng thể</option>
+                                    </select>
+                                </div>
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Quy mô nhân sự <sup>*</sup>
+                                    </label>
+                                    <select class="form__control form__select" placeholder="Nhập quy mô nhân sự">
+                                        <option value="">Dưới 10 nhân viên</option>
+                                        <option value="">10 - 30 nhân viên</option>
+                                        <option value="">30 - 100 nhân viên</option>
+                                        <option value="">100 - 300 nhân viên</option>
+                                        <option value="">Trên 300 nhân viên</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn form__btn bgc__blue--300 text__white--100">
+                                Đăng ký
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <main id="main">
             <section class="price-list">
                 <div class="price-list__banner bgc__gray--100">
@@ -255,7 +341,7 @@
                                     <br>
                                     khách hàng chỉ phải trả những gì mình sử dụng.
                                 </div>
-                                <a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+                                <button type="button" modal-show="show" modal-data="#formContact" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</button>
                             </div>
                             <div class="price-list__image frame">
                                 <img src="images/priceList.svg" alt="priceList.svg">
@@ -265,7 +351,6 @@
                 </div>
                 <div class="container">
                     <div class="price-list__container">
-
                         <div class="price-list__item">
 
                             <div class="price-list__header">
@@ -275,10 +360,8 @@
 
                                 <h2 class="
 																																																																																																																																													                                    price-list__price
-																																																																																																																																													                                    
-																																																																																																																																													                                        text__green--200
-																																																																																																																																													                                    
-																																																																																																																																													                                    ">
+																																																																																																																																													                                    																																																																																																																																													                                        text__green--200
+																																																																																																																																													                                    																																																																																																																																													                                    ">
                                     60.000đ
                                     <time class="price-list__date">
                                         người/tháng
@@ -290,12 +373,10 @@
                             </div>
                             <div class="price-list__body">
 
-
                                 <h3 class="price-list__title text__gray--700">
                                     CRM
                                 </h3>
                                 <ul class="price-list__ul">
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -303,7 +384,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -311,7 +391,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -319,7 +398,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -327,7 +405,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -335,7 +412,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -343,7 +419,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -351,7 +426,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -359,7 +433,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -367,7 +440,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -375,14 +447,11 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                 </ul>
-
                                 <h3 class="price-list__title text__gray--700">
                                     HRM
                                 </h3>
                                 <ul class="price-list__ul">
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -390,7 +459,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -398,7 +466,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -406,7 +473,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -414,7 +480,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -422,7 +487,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -430,7 +494,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -438,7 +501,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -446,7 +508,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -454,7 +515,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -462,14 +522,11 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                 </ul>
-
                                 <h3 class="price-list__title text__gray--700">
                                     Công việc
                                 </h3>
                                 <ul class="price-list__ul">
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -477,7 +534,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -485,7 +541,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -493,7 +548,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -501,7 +555,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -509,7 +562,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -517,7 +569,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -525,7 +576,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -533,7 +583,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -541,7 +590,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -549,16 +597,13 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                 </ul>
-
 
                             </div>
                             <div class="price-list__footer">
-                                <a href="#" class="btn price__btn text__blue--900 bgc__white--100" title="Đăng ký">Đăng ký</a>
+                                <button type="button" modal-show="show" modal-data="#formContact" class="btn price__btn text__blue--900 bgc__white--100" title="Đăng ký">Đăng ký</button>
                             </div>
                         </div>
-
                         <div class="price-list__item">
 
                             <div class="price-list__header">
@@ -568,10 +613,8 @@
 
                                 <h2 class="
 																																																																																																																																													                                    price-list__price
-																																																																																																																																													                                    
-																																																																																																																																													                                        text__blue--200
-																																																																																																																																													                                    
-																																																																																																																																													                                    ">
+																																																																																																																																													                                    																																																																																																																																													                                        text__blue--200
+																																																																																																																																													                                    																																																																																																																																													                                    ">
                                     120.000đ
                                     <time class="price-list__date">
                                         người/tháng
@@ -583,12 +626,10 @@
                             </div>
                             <div class="price-list__body">
 
-
                                 <h3 class="price-list__title text__gray--700">
                                     CRM
                                 </h3>
                                 <ul class="price-list__ul">
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -596,7 +637,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -604,7 +644,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -612,7 +651,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -620,7 +658,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -628,7 +665,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -636,7 +672,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -644,7 +679,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -652,7 +686,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -660,7 +693,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -668,14 +700,11 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                 </ul>
-
                                 <h3 class="price-list__title text__gray--700">
                                     HRM
                                 </h3>
                                 <ul class="price-list__ul">
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -683,7 +712,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -691,7 +719,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -699,7 +726,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -707,7 +733,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -715,7 +740,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -723,7 +747,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -731,7 +754,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -739,7 +761,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -747,7 +768,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -755,14 +775,11 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                 </ul>
-
                                 <h3 class="price-list__title text__gray--700">
                                     Công việc
                                 </h3>
                                 <ul class="price-list__ul">
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -770,7 +787,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -778,7 +794,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -786,7 +801,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -794,7 +808,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -802,7 +815,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -810,7 +822,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -818,7 +829,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -826,7 +836,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -834,7 +843,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/no__check.svg" alt="no__check.svg">
@@ -842,16 +850,13 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                 </ul>
-
 
                             </div>
                             <div class="price-list__footer">
-                                <a href="#" class="btn price__btn text__blue--900 bgc__white--100" title="Đăng ký">Đăng ký</a>
+                                <button type="button" modal-show="show" modal-data="#formContact" class="btn price__btn text__blue--900 bgc__white--100" title="Đăng ký">Đăng ký</button>
                             </div>
                         </div>
-
                         <div class="price-list__item">
 
                             <div class="price-list__header">
@@ -861,10 +866,8 @@
 
                                 <h2 class="
 																																																																																																																																													                                    price-list__price
-																																																																																																																																													                                    
-																																																																																																																																													                                        text__orange--900
-																																																																																																																																													                                    
-																																																																																																																																													                                    ">
+																																																																																																																																													                                    																																																																																																																																													                                        text__orange--900
+																																																																																																																																													                                    																																																																																																																																													                                    ">
                                     200.000đ
                                     <time class="price-list__date">
                                         người/tháng
@@ -876,12 +879,10 @@
                             </div>
                             <div class="price-list__body">
 
-
                                 <h3 class="price-list__title text__gray--700">
                                     CRM
                                 </h3>
                                 <ul class="price-list__ul">
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -889,7 +890,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -897,7 +897,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -905,7 +904,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -913,7 +911,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -921,7 +918,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -929,7 +925,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -937,7 +932,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -945,7 +939,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -953,7 +946,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -961,14 +953,11 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                 </ul>
-
                                 <h3 class="price-list__title text__gray--700">
                                     HRM
                                 </h3>
                                 <ul class="price-list__ul">
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -976,7 +965,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -984,7 +972,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -992,7 +979,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1000,7 +986,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1008,7 +993,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1016,7 +1000,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1024,7 +1007,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1032,7 +1014,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1040,7 +1021,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1048,14 +1028,11 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                 </ul>
-
                                 <h3 class="price-list__title text__gray--700">
                                     Công việc
                                 </h3>
                                 <ul class="price-list__ul">
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1063,7 +1040,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1071,7 +1047,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1079,7 +1054,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1087,7 +1061,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1095,7 +1068,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1103,7 +1075,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1111,7 +1082,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1119,7 +1089,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1127,7 +1096,6 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                     <li class="d__flex text__gray--700">
                                         <span class="price-list__icon">
                                             <img src="images/icons/icon__check2.svg" alt="icon__check2.svg">
@@ -1135,16 +1103,13 @@
                                         <span class="price-list__text">Quản lý hợp đồng lao động</span>
 
                                     </li>
-
                                 </ul>
-
 
                             </div>
                             <div class="price-list__footer">
-                                <a href="#" class="btn price__btn text__blue--900 bgc__white--100" title="Đăng ký">Đăng ký</a>
+                                <button type="button" modal-show="show" modal-data="#formContact" class="btn price__btn text__blue--900 bgc__white--100" title="Đăng ký">Đăng ký</button>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -1157,9 +1122,9 @@
                     <p class="global__header--info">
                         BOS sẽ tư vấn giải pháp phù hợp nhất với bạn trong 24h làm việc!
                     </p>
-                    <a href="#" class="btn btn__detail bgc__white--100 text__blue--900" title="Tôi cần tư vấn thêm">
+                    <button type="button" modal-show="show" modal-data="#formContact" class="btn btn__detail bgc__white--100 text__blue--900" title="Tôi cần tư vấn thêm">
                         Tôi cần tư vấn thêm
-                    </a>
+                    </button>
                 </div>
             </section>
             <section class="question">
@@ -1324,9 +1289,9 @@
                     <p class="global__header--info">
                         Tổng đài tư vấn miễn phí: 1900 1066
                     </p>
-                    <a href="#" class="btn btn__detail bgc__white--100 text__blue--900" title="Đăng ký dùng thử">
+                    <button type="button" modal-show="show" modal-data="#formContact" class="btn btn__detail bgc__white--100 text__blue--900" title="Đăng ký dùng thử">
                         Đăng ký dùng thử
-                    </a>
+                    </button>
                 </div>
             </section>
         </main>

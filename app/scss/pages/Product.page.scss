@@ -187,6 +187,29 @@
                     }
                 }
             }
+            .detail__content {
+                h3 {
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    line-height: 2.8rem;
+                    @include cutOne();
+                    margin-bottom: 1.8rem;
+                }
+                .detail__info {
+                    @include cutLimit($lineClamp: 2);
+                    font-weight: 500;
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+        &:nth-child(even) {
+            background-color: map-get($colors, "gray-100");
+            .detail__group {
+                .detail__image {
+                    order: 2;
+                }
+            }
         }
     }
 }
@@ -201,6 +224,14 @@
     .finance__group {
         row-gap: 3rem;
         column-gap: 3rem;
+    }
+    .product__detail {
+        .detail__item {
+            padding: 3rem 0;
+            .detail__group {
+                column-gap: 3rem;
+            }
+        }
     }
 }
 @media (max-width: 991.98px) {
@@ -248,6 +279,24 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 3rem;
+    }
+    .product__detail {
+        .detail__item {
+            &:nth-child(even) {
+                .detail__group {
+                    .detail__image {
+                        order: 1;
+                    }
+                    .detail__content {
+                        order: 2;
+                    }
+                }
+            }
+            .detail__group {
+                grid-template-columns: repeat(1, 1fr);
+                grid-column: 0;
+            }
+        }
     }
 }
 @media (max-width: 576.98px) {

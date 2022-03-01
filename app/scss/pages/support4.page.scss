@@ -90,9 +90,21 @@
     }
     &__pagination {
         flex: 1;
+
+        .pagination {
+            margin-top: 0;
+            margin-bottom: 8.8rem;
+        }
     }
     &__content {
         padding: 2.4rem;
+    }
+    &__5 {
+        padding-bottom: 0px;
+        .support__content {
+            padding: 0;
+            padding-bottom: 3.2rem;
+        }
     }
 }
 
@@ -113,6 +125,33 @@
         flex-direction: column;
         &__item {
             max-width: 100%;
+        }
+    }
+    .support__5 {
+        .support__content {
+            padding-bottom: 0;
+        }
+    }
+    .support__pagination {
+        .pagination {
+            margin-bottom: 3rem;
+        }
+    }
+    .support__trustBusiness {
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 478.98px) {
+    .support__content {
+        .question__header {
+            padding: 1.5rem;
+        }
+    }
+    .question {
+        .container {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }

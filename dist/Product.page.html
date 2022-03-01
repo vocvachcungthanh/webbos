@@ -10,7 +10,6 @@
     <meta name="robots" , content="index, follow">
     <link rel="icon" , href="images/icons/favicon-16x16.svg" , type="image/x-icon" , sizes="16x16" />
     <title>
-
         Sản phẩm
     </title>
     <link rel="icon" , href="images/icons/favicon-16x16.png" , type="image/x-icon" , sizes="16x16" />
@@ -21,7 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/tool.css" />
     <link rel="stylesheet" href="css/main.css" />
-
     <link rel="stylesheet" href="./css/pages/Product.page.css" />
 </head>
 
@@ -33,7 +31,6 @@
                     <a href="index.html" class="logo" title="suyn fashion" title="webiste bos">
                         <img src="images/icons/icon__logo.svg" alt="icon__logo.svg">
                     </a>
-
                     <div class="addon__menu">
                         <div class="box__menu">
                             <ul class="menu">
@@ -233,13 +230,100 @@
                             </ul>
                         </div>
                     </div>
-
-                    <button class="btn btn__registration text__blue--900 bgc__green--200">
+                    <button type="button" modal-show="show" modal-data="#formContact" class="btn btn__registration text__blue--900 bgc__green--200">
                         Đăng ký
                     </button>
                 </div>
             </div>
         </header>
+        <div class="bs-modal modal__recruit" id="formContact">
+            <div class="modal-frame">
+                <div class="content-modal">
+                    <div class="module__contact">
+                        <form action="" class="contact__body--form">
+                            <div class="form__group">
+                                <label for="" class="form__label">
+                                    Họ và tên của bạn <sup>*</sup>
+                                </label>
+                                <input type="text" placeholder="Nhập họ và tên của bạn" class="form__control" />
+                            </div>
+                            <div class="form__group">
+                                <label for="" class="form__label">
+                                    Giải pháp bạn quan tâm <sup>*</sup>
+                                </label>
+                                <select class="form__control form__select" placeholder="Chọn giải pháp/ứng dụng bạn quan tâm nhất">
+                                    <option value="">Quản lý công việc</option>
+                                    <option value="">Quản lý nhân sự</option>
+                                    <option value="">Quản lý CRM</option>
+                                    <option value="">Quản lý tổng thể</option>
+                                </select>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Email <sup>*</sup>
+                                    </label>
+                                    <input type="text" placeholder="Nhập email cá nhân" class="form__control" />
+                                </div>
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Số điện thoại <sup>*</sup>
+                                    </label>
+                                    <input type="number" placeholder="Nhập số điện thoại liên hệ" class="form__control" />
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Vị trí công việc <sup>*</sup>
+                                    </label>
+                                    <select class="form__control form__select" placeholder="Nhập vị trí công việc">
+                                        <option value="">Lãnh đạo (Chủ tịch, CEO,...)</option>
+                                        <option value="">Quản lý nhân sự</option>
+                                        <option value="">Quản lý CRM</option>
+                                        <option value="">Nhân viên</option>
+                                    </select>
+                                </div>
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Tên công ty <sup>*</sup>
+                                    </label>
+                                    <input type="text" placeholder="Nhập số điện thoại liên hệ" class="form__control" />
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Tỉnh/thành phố <sup>*</sup>
+                                    </label>
+                                    <select class="form__control form__select" placeholder="Chọn tỉnh/thành phố">
+                                        <option value="">Quản lý công việc</option>
+                                        <option value="">Quản lý nhân sự</option>
+                                        <option value="">Quản lý CRM</option>
+                                        <option value="">Quản lý tổng thể</option>
+                                    </select>
+                                </div>
+                                <div class="form__group">
+                                    <label for="" class="form__label">
+                                        Quy mô nhân sự <sup>*</sup>
+                                    </label>
+                                    <select class="form__control form__select" placeholder="Nhập quy mô nhân sự">
+                                        <option value="">Dưới 10 nhân viên</option>
+                                        <option value="">10 - 30 nhân viên</option>
+                                        <option value="">30 - 100 nhân viên</option>
+                                        <option value="">100 - 300 nhân viên</option>
+                                        <option value="">Trên 300 nhân viên</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn form__btn bgc__blue--300 text__white--100">
+                                Đăng ký
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <main id="main">
             <section class="page-product">
                 <div class="page-product__banner">
@@ -256,7 +340,7 @@
                                     Hơn 300.000 người dùng đến từ
                                     hơn 3.500 doanh nghiệp Việt lựa chọn và tin dùng
                                 </div>
-                                <a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+                                <button type="button" modal-show="show" modal-data="#formContact" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</button>
                             </div>
                             <div class="page-product__image frame">
                                 <img src="images/banner__product.svg" alt="banner__product.svg">
@@ -478,19 +562,17 @@
                             </a>
                         </div>
 
-
                         <div class="d__flex justify__content">
-                            <a class="global__view d__flex text__blue--400" href=title="Xem thêm">
+                            <a class="global__view d__flex text__blue--400" href=ProductModule.page.html title="Xem thêm">
                                 <span class="global__view--text">
                                     Xem thêm
                                 </span>
                                 <img src="images/icons/icon__view.svg" alt="icon__view.svg">
                             </a>
-
                         </div>
                     </div>
                     <div class="text__center m__t--32">
-                        <a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+                        <button type="button" modal-show="show" modal-data="#formContact" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</button>
                     </div>
                 </div>
             </section>
@@ -707,19 +789,17 @@
                             </a>
                         </div>
 
-
                         <div class="d__flex justify__content">
-                            <a class="global__view d__flex text__blue--400" href=title="Xem thêm">
+                            <a class="global__view d__flex text__blue--400" href=ProductModule.page.html title="Xem thêm">
                                 <span class="global__view--text">
                                     Xem thêm
                                 </span>
                                 <img src="images/icons/icon__view.svg" alt="icon__view.svg">
                             </a>
-
                         </div>
                     </div>
                     <div class="text__center m__t--32">
-                        <a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+                        <button type="button" modal-show="show" modal-data="#formContact" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</button>
                     </div>
                 </div>
             </section>
@@ -936,19 +1016,17 @@
                             </a>
                         </div>
 
-
                         <div class="d__flex justify__content">
-                            <a class="global__view d__flex text__blue--400" href=title="Xem thêm">
+                            <a class="global__view d__flex text__blue--400" href=ProductModule.page.html title="Xem thêm">
                                 <span class="global__view--text">
                                     Xem thêm
                                 </span>
                                 <img src="images/icons/icon__view.svg" alt="icon__view.svg">
                             </a>
-
                         </div>
                     </div>
                     <div class="text__center m__t--32">
-                        <a href="#" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</a>
+                        <button type="button" modal-show="show" modal-data="#formContact" class="btn banner__btn text__blue--900 bgc__green--200" title="Đăng ký">Đăng ký</button>
                     </div>
                 </div>
             </section>

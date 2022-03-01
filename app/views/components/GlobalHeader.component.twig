@@ -12,9 +12,11 @@
 			{{info}}
 		</p>
 		{% if btn %}
-			<a href="#" class="btn btn__detail bgc__white--100 text__blue--900" title="{{btn}}">
+			<button type="button"
+                modal-show="show"
+                modal-data="#formContact" class="btn btn__detail bgc__white--100 text__blue--900" title="{{btn}}">
 				{{btn}}
-			</a>
+			</button>
 		{% endif %}
 	</div>
 </section>
