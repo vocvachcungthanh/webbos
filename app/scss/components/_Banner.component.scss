@@ -122,7 +122,55 @@
         font-size: 1.6rem;
     }
 }
+@media (max-width: 991.98px) {
+    .banner__group {
+        column-gap: 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .banner__content {
+            text-align: center;
+            order: 2;
+        }
+        .banner__image {
+            max-width: 80%;
+            margin: auto;
+            padding-top: 60%;
+        }
+    }
+}
 
+@media (max-width: 767.98px) {
+    .banner__title {
+        font-size: 4rem;
+    }
+    .banner__group {
+        .banner__content {
+            margin-top: 5rem;
+        }
+    }
+    .banner__info {
+        margin-top: 0;
+        font-size: 2.5rem;
+    }
+    .banner {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .banner__title {
+        font-size: 3.5rem;
+    }
+    .banner__info {
+        font-size: 1.8rem;
+    }
+    .banner__group {
+        .banner__content {
+            margin-top: 3rem;
+        }
+    }
+}
 @keyframes circle__1 {
     0% {
         transform: scale(0);

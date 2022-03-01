@@ -109,3 +109,31 @@ a {
         font-size: 3rem;
     }
 }
+@media (max-width: 991.98px) {
+    .global__header {
+        .container {
+            .header__image {
+                max-width: 13rem;
+            }
+        }
+    }
+}
+@media (max-width: 767.98rem) {
+    .title__global {
+        text-align: center;
+    }
+}
+@media (max-width: 575.98px) {
+    .global__header .container .header__image img {
+        display: none;
+    }
+}
+@media (max-width: 479.98px) {
+    .title__global {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+    .establish__desc {
+        text-align: justify;
+    }
+}

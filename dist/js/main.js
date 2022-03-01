@@ -7,6 +7,20 @@ $(document).ready(function () {
             dots: true,
             arrows: false,
             autoplay: true,
+            responsive: [
+                {
+                    breakpoint: 767.98,
+                    settings: {
+                        slidesToShow: 5,
+                    },
+                },
+                {
+                    breakpoint: 575.98,
+                    settings: {
+                        slidesToShow: 3,
+                    },
+                },
+            ],
         });
     }
     trustSlider();
@@ -17,6 +31,15 @@ $(document).ready(function () {
             slidesToScroll: 1,
             autoplay: false,
             infinite: false,
+            responsive: [
+                {
+                    breakpoint: 767.98,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    },
+                },
+            ],
         });
     }
 
@@ -42,6 +65,7 @@ $(document).ready(function () {
             slidesToShow: 6,
             slidesToScroll: 1,
             variableWidth: true,
+            swipe: true,
         });
     }
     menuSlide();

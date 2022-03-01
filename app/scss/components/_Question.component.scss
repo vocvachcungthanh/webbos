@@ -73,3 +73,35 @@
         text-align: justify;
     }
 }
+
+@media (max-width: 1199.98px) {
+    .question {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .question {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .question__group {
+        column-gap: 2rem;
+    }
+    .question__image {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 776.98px) {
+    .question__group {
+        column-gap: 0;
+        flex-direction: column;
+    }
+    .question__image {
+        padding-top: 66.66%;
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+}

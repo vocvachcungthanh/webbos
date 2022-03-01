@@ -69,3 +69,30 @@
         padding-bottom: 8rem;
     }
 }
+
+@media (max-width: 1199.98px) {
+    .detail {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .detail {
+        max-width: 446px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .news {
+        &__header {
+            &--gulp {
+                column-gap: 0px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    .detail {
+        max-width: 100%;
+        margin-bottom: 4rem;
+    }
+}

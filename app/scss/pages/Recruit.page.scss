@@ -23,11 +23,19 @@
     }
 }
 .question {
+    &__group {
+        padding-top: 0;
+    }
     &__body {
         display: none;
         margin-top: 1.2rem;
-        border-top: 1px solid map-get($colors, "gray--200");
+        border-top: 1px solid map-get($colors, "gray-200");
         padding-top: 1.2rem;
+        box-shadow: unset;
+        border-radius: unset;
+        padding-left: unset;
+        padding-right: unset;
+        background-color: transparent;
     }
     &__item {
         padding: 2.4rem;
@@ -71,6 +79,8 @@
     }
     &__desc {
         margin-bottom: 1.2rem;
+        border-left: unset;
+        padding-left: unset;
         h3 {
             font-size: 1.6rem;
             line-height: 2rem;
@@ -99,6 +109,77 @@
             @include arrow($arrow: "left", $size: 4px, $color: #757575);
             border-left: 8px solid map-get($colors, "gray-500");
             right: 0;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .recruit {
+        &__body {
+            &--content {
+                max-width: 65%;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .recruit {
+        padding-bottom: 5rem;
+        &__body {
+            &--group {
+                column-gap: 1.5rem;
+            }
+            &--content {
+                max-width: 60%;
+            }
+        }
+    }
+    .question {
+        &__title {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .recruit {
+        &__body {
+            &--group {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            &--content {
+                max-width: 100%;
+            }
+        }
+    }
+    .news {
+        &__header {
+            &--item {
+                margin-top: 3rem;
+                width: 100%;
+            }
+        }
+    }
+    .question {
+        &__item {
+            padding: 1.5rem;
+        }
+        &__list {
+            li {
+                flex-wrap: wrap;
+                .name {
+                    width: 87%;
+                }
+                a {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-left: 0;
+                }
+            }
         }
     }
 }

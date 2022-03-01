@@ -289,3 +289,135 @@
         column-gap: 3rem;
     }
 }
+
+@media (max-width: 991.98px) {
+    .establish__image {
+        max-width: 50%;
+    }
+    .different__group {
+        max-width: 100%;
+        column-gap: 1.5rem;
+    }
+    .different__image {
+        max-width: 35%;
+    }
+    .tools__list {
+        column-gap: 1.5rem;
+        padding-left: 1.5rem;
+        row-gap: 1rem;
+    }
+    .tools__item {
+        max-width: calc(50% - 0.8rem);
+    }
+    .tools__item--icon {
+        width: 4rem;
+        height: 4rem;
+    }
+    .tools__next {
+        img {
+            margin-left: 0;
+        }
+    }
+    .tools__bos {
+        padding: 1.5rem;
+        border-radius: 3rem 0;
+        max-width: 225px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .establish {
+        padding: 3rem 0;
+    }
+    .establish__group {
+        column-gap: unset;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .establish__image {
+        max-width: 100%;
+        img {
+            object-position: center center;
+            object-fit: contain;
+        }
+    }
+    .different__group {
+        flex-direction: column;
+        column-gap: unset;
+        flex-wrap: wrap;
+    }
+    .different__content {
+        justify-content: center;
+        column-gap: 1.5rem;
+        order: 2;
+    }
+    .different__image {
+        order: 0;
+    }
+    .different__icon {
+        margin: auto;
+    }
+    .different {
+        padding-bottom: 3rem;
+    }
+    .tools {
+        padding: 3rem 0;
+    }
+    .tools__group {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .tools__bos {
+        padding: 3rem 1.5rem;
+        border-radius: 0 2rem;
+        max-width: 500px;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .news__body {
+        column-gap: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .different__content {
+        flex-direction: column;
+    }
+    .different__item {
+        text-align: center;
+    }
+    .different__image {
+        padding-top: 66.66%;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .tools__group {
+        margin-top: 3rem;
+    }
+    .tools__item {
+        max-width: 100%;
+    }
+    .tools__list {
+        row-gap: 1.5rem;
+        column-gap: 0;
+        padding: 1.5rem;
+    }
+    .feedback__container {
+        padding: 1rem;
+    }
+    .news__body {
+        column-gap: 0;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feedback {
+        .slick-arrow {
+            &.slick-next,
+            &.slick-prev {
+                top: 93%;
+                left: 35%;
+            }
+        }
+    }
+}

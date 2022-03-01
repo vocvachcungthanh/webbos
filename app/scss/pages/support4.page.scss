@@ -91,4 +91,28 @@
     &__pagination {
         flex: 1;
     }
+    &__content {
+        padding: 2.4rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .support {
+        column-gap: 1.5rem;
+        &__item {
+            max-width: 20rem;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .support {
+        padding-bottom: 3rem;
+        column-gap: 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+        &__item {
+            max-width: 100%;
+        }
+    }
 }

@@ -204,6 +204,7 @@
                 align-items: center;
                 margin-bottom: 1.6rem;
                 .omega__icon {
+                    flex-shrink: 0;
                     width: 3.6rem;
                     height: 3.6rem;
                     overflow: hidden;
@@ -270,5 +271,94 @@
         line-height: 1.523rem;
         font-size: 1.3rem;
         margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .support {
+        padding: 5rem 0;
+        &__body {
+            column-gap: 3rem;
+        }
+    }
+    .menu__support {
+        .slick-arrow {
+            &.slick-next {
+                right: -5rem;
+            }
+            &.slick-prev {
+                left: -5rem;
+            }
+        }
+        .omega {
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 50%;
+        }
+        li {
+            &:hover {
+                .omega {
+                    left: 6%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .support {
+        padding: 3rem 0;
+        &__body {
+            column-gap: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .menu__support {
+        li {
+            .omega {
+                padding: 1.5rem;
+            }
+        }
+        .slick-arrow {
+            &.slick-next {
+                right: -2rem;
+            }
+            &.slick-prev {
+                left: -2rem;
+            }
+        }
+        .omega {
+            &__slide {
+                &--item {
+                    padding: 0 1.5rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    .support {
+        &__body {
+            column-gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .menu__support {
+        &--link {
+            padding: 1rem 1rem 1rem;
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 479.98px) {
+    .support {
+        &__body {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .menu__support {
+        &--link {
+            font-size: 1.2rem;
+        }
     }
 }

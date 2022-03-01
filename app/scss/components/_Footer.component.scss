@@ -147,6 +147,14 @@
 }
 
 @media (max-width: 1199.98px) {
+    .footer {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .footer__bottom {
+        margin-top: 5rem;
+        padding-top: 3rem;
+    }
     .footer__bottom--group {
         column-gap: 2.5rem;
     }
@@ -163,6 +171,100 @@
         &:first-child,
         &:last-child {
             max-width: 200px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .footer__bottom--group {
+        column-gap: unset;
+        flex-wrap: wrap;
+    }
+    .footer__bottom--item {
+        &:first-child,
+        &:last-child {
+            max-width: 47%;
+            column-gap: 1.5rem;
+        }
+
+        .footer__list {
+            margin: 0;
+            padding: 0;
+            &:first-child {
+                column-gap: 1.5rem;
+            }
+        }
+        &:last-child {
+            padding-left: 1.5rem;
+            max-width: 53%;
+            order: 2;
+            column-gap: unset;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: flex-end;
+            a {
+                flex: 1;
+            }
+        }
+        &:nth-child(2) {
+            order: 3;
+            max-width: 100%;
+            column-gap: 1.5rem;
+            margin-top: 3rem;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .footer__body {
+        margin-top: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 549.98px) {
+    .footer__body {
+        margin-top: 3rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer__bottom--group {
+        flex-direction: column;
+    }
+    .footer__bottom--item {
+        &:first-child,
+        &:last-child {
+            max-width: 100%;
+            column-gap: unset;
+        }
+        &:first-child {
+            margin-bottom: 2rem;
+        }
+        &:last-child {
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+    .footer__bottom--item {
+        &:not(:last-child) {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(251, 251, 251, 0.231);
+        }
+        &:nth-child(2) {
+            column-gap: unset;
+            flex-direction: column;
+            margin-top: 0;
+        }
+    }
+    .footer__bottom--item {
+        &:last-child {
+            margin-top: 2rem;
+            order: 3;
         }
     }
 }

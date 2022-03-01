@@ -92,3 +92,54 @@
         line-height: 1.523rem;
     }
 }
+
+@media (max-width: 1199.98px) {
+    .experience {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        &__body {
+            column-gap: 3rem;
+            row-gap: 3rem;
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .experience {
+        &__item {
+            &:before {
+                border-top: 2rem solid transparent;
+                border-bottom: 2rem solid transparent;
+                border-left: 3rem solid #fff;
+            }
+        }
+        &__title {
+            @include cutOne();
+        }
+        &__part {
+            margin-top: 1rem;
+        }
+        &__desc {
+            -webkit-line-clamp: 2;
+        }
+    }
+}
+
+@media (max-width: 667.98px) {
+    .experience {
+        padding: 3rem 0;
+        &__body {
+            column-gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media (max-width: 479.98px) {
+    .experience {
+        &__body {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__desc {
+            -webkit-line-clamp: 4;
+        }
+    }
+}
