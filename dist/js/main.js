@@ -12,15 +12,16 @@ $(document).ready(function () {
                 {
                     breakpoint: 767.98,
                     settings: {
-                        slidesToShow: 5,
+                        slidesToShow: 1,
                         arrows: false,
+                        autoplay: true,
+                        infinite: true,
                     },
                 },
                 {
                     breakpoint: 575.98,
                     settings: {
                         slidesToShow: 1,
-                        rows: 4,
                     },
                 },
             ],
