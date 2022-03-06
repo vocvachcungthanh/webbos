@@ -78,10 +78,8 @@ $(document).ready(function () {
         var height = $("#header").height();
         if ($(this).scrollTop() > height) {
             $(".back-top").addClass("active");
-            $(".header-body").addClass("active");
         } else {
             $(".back-top").removeClass("active");
-            $(".header-body").removeClass("active");
         }
     });
     $(".back-top").on("click", function () {
