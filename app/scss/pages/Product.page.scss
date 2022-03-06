@@ -92,7 +92,7 @@
         column-gap: 5.8rem;
         row-gap: 3.2rem;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     &__info {
         font-size: 1.8rem;
@@ -164,7 +164,7 @@
         padding: 8rem 0;
         .detail__group {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             column-gap: 9.9rem;
             .detail__image {
                 padding-top: 60.17%;
@@ -255,7 +255,7 @@
         margin-bottom: 3rem;
     }
     .finance__group {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .build {
         padding-top: 5rem;
@@ -293,7 +293,7 @@
                 }
             }
             .detail__group {
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: repeat(1, minmax(0, 1fr));
                 grid-column: 0;
             }
         }
@@ -301,12 +301,12 @@
 }
 @media (max-width: 576.98px) {
     .finance__group {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 @media (max-width: 479.98px) {
     .finance__group {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 @keyframes decagon {

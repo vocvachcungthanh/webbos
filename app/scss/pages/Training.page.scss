@@ -58,8 +58,9 @@
             width: 100%;
             margin-left: auto;
             margin-right: auto;
-            column-gap: 2.4rem;
+
             align-items: flex-start;
+            flex-wrap: wrap;
             &:hover {
                 .training__item--image {
                     img {
@@ -96,6 +97,11 @@
                 z-index: 2;
             }
         }
+        &--content {
+            max-width: calc(100% - 47.2rem);
+            width: 100%;
+            padding-left: 2.4rem;
+        }
         &--title {
             @include cutOne();
             font-size: 2.4rem;
@@ -108,6 +114,7 @@
             font-size: 1.6rem;
             line-height: 2.6rem;
             margin-bottom: 1.6rem;
+            text-align: justify;
         }
     }
     &__pagination {
@@ -160,10 +167,13 @@
         &__item {
             &--group {
                 max-width: 100%;
-                column-gap: 1.5rem;
             }
             &--image {
                 max-width: 350px;
+            }
+            &--content {
+                max-width: calc(100% - 350px);
+                padding-left: 1.5rem;
             }
             &--title {
                 width: 91%;
@@ -200,6 +210,10 @@
                 max-width: 100%;
                 padding-top: 55.66%;
                 margin-bottom: 1.5rem;
+            }
+            &--content {
+                max-width: 100%;
+                padding-left: 0;
             }
         }
     }

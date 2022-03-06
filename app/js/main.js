@@ -190,12 +190,13 @@ $(document).ready(function () {
                 .find(".content-modal")
                 .removeClass("show-modal");
         });
-        let showModal = $(".modal__container");
-        $(".modal-frame").on("click", function (e) {
+        let showModal = $(".content-modal");
+        $(".bs-modal").on("click", function (e) {
             if (
                 !showModal.is(e.target) &&
                 showModal.has(e.target).length === 0
             ) {
+                console.log("thanh");
                 $("body").removeClass("active-modal");
                 $(".bs-modal").removeClass("show-modal");
             }

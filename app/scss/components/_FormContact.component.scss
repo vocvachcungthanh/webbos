@@ -44,7 +44,7 @@
         &__row {
             display: grid;
             column-gap: 3.9rem;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
         &__btn {
             width: 100%;
@@ -64,7 +64,7 @@
     .contact__body,
     .module__contact {
         .form__row {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(1, minmax(0, 1fr));
             column-gap: 0;
         }
     }
@@ -74,7 +74,7 @@
     .contact__body,
     .module__contact {
         .form__row {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             column-gap: 1.5rem;
         }
     }
@@ -83,7 +83,7 @@
     .contact__body,
     .module__contact {
         .form__row {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(1, minmax(0, 1fr));
             column-gap: 0;
         }
     }

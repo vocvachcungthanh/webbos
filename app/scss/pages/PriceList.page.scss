@@ -38,7 +38,7 @@
         padding-top: 10rem;
         padding-bottom: 8rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 3.7rem;
         max-width: 96.8rem;
         width: 100%;
@@ -197,7 +197,7 @@
 
 @media (max-width: 767.98px) {
     .price-list__container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         row-gap: 3rem;
     }
 }
@@ -218,6 +218,6 @@
 
 @media (max-width: 479.98px) {
     .price-list__container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }

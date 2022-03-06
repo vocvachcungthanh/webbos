@@ -28,7 +28,7 @@
     }
     &__body {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 2.4rem;
         row-gap: 6rem;
         margin-top: 6.389rem;
@@ -107,7 +107,7 @@
                 &:first-child {
                     column-gap: 5.9rem;
                     display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
                 }
                 li {
                     min-width: 12.2rem;
@@ -162,7 +162,7 @@
         .footer__list {
             &:first-child {
                 column-gap: 2.5rem;
-                grid-template-columns: repeat(2, auto);
+                grid-template-columns: repeat(2, minmax(0, auto));
             }
         }
         &:nth-child(2) {
@@ -223,13 +223,13 @@
     }
     .footer__body {
         margin-top: 3rem;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 @media (max-width: 549.98px) {
     .footer__body {
         margin-top: 3rem;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     .footer__bottom--group {
         flex-direction: column;
