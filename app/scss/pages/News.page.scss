@@ -73,6 +73,12 @@
                 opacity: 0.6;
             }
         }
+        .image {
+            padding-top: 78.25%;
+            img {
+                object-fit: cover;
+            }
+        }
     }
 
     &__hot {
@@ -100,6 +106,9 @@
         }
         &--image {
             padding-top: 52.084%;
+            img {
+                object-fit: cover;
+            }
         }
         &--name {
             @include cutOne();

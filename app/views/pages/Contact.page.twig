@@ -104,12 +104,52 @@ block titlePage %} Liên hệ {% endblock %} {% block stylePage %}
                 </div>
             </div>
         </div>
-        {% include "../components/FormContact.component.twig" %}
+       <div class="contact__dk">
+ <form action="" class="contact__body--form">
+            <div class="form__group">
+                <label for="" class="form__label">
+                    Họ và tên của bạn <sup>*</sup>
+                </label>
+                <input
+                    type="text"
+                    placeholder="Nhập họ và tên của bạn"
+                    class="form__control"
+                />
+            </div>
+            <div class="form__group">
+                <label for="" class="form__label">
+                    Số điện thoại * <sup>*</sup>
+                </label>
+                <input
+                    type="text"
+                    placeholder="Nhập số điện thoại"
+                    class="form__control"
+                />
+            </div>
+            <div class="form__group">
+                <label for="" class="form__label">
+                    Chủ đề cần liên hệ <sup>*</sup>
+                </label>
+                <input
+                    type="text"
+                    placeholder="Nhập chủ đề cần giải đáp"
+                    class="form__control"
+                />
+            </div>
+            <div class="form__group">
+                <label for="" class="form__label">
+                    Câu hỏi cần giải đáp <sup>*</sup>
+                </label>
+               <textarea class="form__control form__textarea" placeholder="Nhập câu hỏi cần giải đáp"></textarea>
+            </div>
+            <button class="btn form__btn bgc__blue--300 text__white--100">
+                Đăng ký
+            </button>
+        </form>
+
+</div>
     </div>
 </section>
-<div class="contact__dk">
 
-    {% include "../components/GlobalHeader.component.twig" with {title:"Đăng ký để được tư vấn", info:"BOS sẽ tư vấn giải pháp phù hợp nhất với bạn trong 24h làm việc!", bg:"images/contact__dk.svg",  btn:"Đăng ký",}  %}
-</div>
 {% include "../components/TrustBusiness.compoent.twig" %}
 {% endblock %}

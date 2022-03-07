@@ -6,6 +6,9 @@
     }
     &__image {
         padding-top: 56.08%;
+        img {
+            object-fit: cover;
+        }
     }
     &__title {
         @include cutLimit($lineClamp: 2);
